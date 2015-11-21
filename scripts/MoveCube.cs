@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using NodeCanvas.Framework;
 using DG.Tweening;
+using ParadoxNotion.Design;
 
+[Category("Player actions")]
 public class MoveCube : ActionTask {
 
     public BBParameter<string> direction;
@@ -45,11 +47,11 @@ public class MoveCube : ActionTask {
         agent.transform.DORotate(tRot, moveTime.value).SetEase(easeType).OnComplete(
             () => ResetTransform(tPos, oRot)
         );
-        EndAction(true);
     }
 
     private void ResetTransform(Vector3 pos, Quaternion rot) {
         agent.transform.rotation = rot;
         agent.transform.position = pos;
+        EndAction(true);
     }
 }

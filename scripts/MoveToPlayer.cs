@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using DG.Tweening;
@@ -8,38 +9,22 @@ public class MoveToPlayer : ActionTask {
 
     public BBParameter<Transform> player;
     public BBParameter<float> moveTime = 2f;
-    public BBParameter<Vector3> originalOffset;
-
-    private Vector3 startMovePos;
-    private float currentLerpTime = 0f;
+    public BBParameter<Vector3> offset;
 
     protected override string OnInit() {
-        if (player.value == null || originalOffset.value == null) {
+        if (player.value == null || offset.value == null) {
             return "Player or offset are not specified";
         }
         return null;
     }
 
-    protected override void OnExecute() {
-        startMovePos = agent.transform.position;
-    }
 
     protected override void OnUpdate(){
-        currentLerpTime += Time.deltaTime;
+        agent.transform.position = Vector3.Lerp(agent.transform.position, player.value.position + offset.value, Time.deltaTime);
 
-        if (currentLerpTime > moveTime.value) {
-            currentLerpTime = moveTime.value;
-        }
-        float perc = currentLerpTime / moveTime.value;
-        agent.transform.position = Vector3.Lerp(startMovePos, player.value.position, perc);
-
-        if (Vector3.Distance(agent.transform.position - player.value.position, originalOffset.value) > 0.5f) {
+        if (Vector3.Distance(agent.transform.position - player.value.position, offset.value) < 0.1f) {
             EndAction(true);
         }
-
-        // Ease easeType = Ease.InOutQuart;
-        // agent.transform.DOMove(player.value.position + originalOffset.value, moveTime.value).SetEase(easeType).OnComplete(
-        //     () => EndAction(true)
-        // );
     }
+
 }
