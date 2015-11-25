@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"traPo",
+				"targetPointIndex"
+			],
+			[
 				"tarpo",
 				"targetPointIndex"
 			],
@@ -510,36 +514,16 @@
 			[
 				"наим",
 				"наименования	(billing_period.py)"
-			],
-			[
-				"secon",
-				"second_period"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "PlayerCubeSense.cs",
+			"file": "MoveCube.cs",
 			"settings":
 			{
-				"buffer_size": 302,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "RestartFromCheckpoint.cs",
-			"settings":
-			{
-				"buffer_size": 313,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "MoveToNextPoint.cs",
-			"settings":
-			{
-				"buffer_size": 728,
+				"buffer_size": 1643,
 				"line_ending": "Unix"
 			}
 		}
@@ -584,7 +568,7 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "bla",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -812,7 +796,7 @@
 				"Git: Commit"
 			]
 		],
-		"width": 539.0
+		"width": 674.0
 	},
 	"console":
 	{
@@ -887,8 +871,18 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts"
+	],
 	"file_history":
 	[
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/FollowTarget.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/ChildrenBoxColliderToggle.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToNextPoint.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/RestartFromCheckpoint.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerCubeSense.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/ChildrenBoxColliderToggle",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveCube.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveEnemy.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/Constants.cs",
@@ -1010,13 +1004,7 @@
 		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/object_window.js",
 		"/Users/nemish/projects/Kit2/kit2/kit/lib/project_leave.py",
 		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/workspace/debts.js",
-		"/Users/nemish/projects/Kit2/kit2/kit/tests/lib/test_project_leave_info.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/api/project_leaves/api.py",
-		"/Users/nemish/projects/Kit2/finance/api/debt/api.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/workspace/sites/sites.js",
-		"/Users/nemish/projects/Kit2/salary/tests/test_calculator.py",
-		"/Users/nemish/projects/Kit2/finance/conditions.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/workspace/project_leaves/project_leave_window.js"
+		"/Users/nemish/projects/Kit2/kit2/kit/tests/lib/test_project_leave_info.py"
 	],
 	"find":
 	{
@@ -1140,6 +1128,18 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"SendEvent",
+			"Collider",
+			"BoxCollider",
+			"toggled",
+			"count",
+			"currentpointindex",
+			"targetpointindex",
+			"nextpointreversed",
+			"traget",
+			"currentPointIndex",
+			"targetPointIndex",
+			"changePointType",
 			"CreateChargeFromPeriod",
 			"DataStore",
 			"var ",
@@ -1255,19 +1255,7 @@
 			"SalesAnalyticsHandler",
 			"get_slave_connection",
 			"get_slave_connections",
-			"date_from",
-			"dateTo",
-			"\"dateFrom\"",
-			"dateFrom",
-			"date_from",
-			"data_handler",
-			"getUrl",
-			"tasks",
-			"_tasks",
-			"EVENT_TYPES",
-			"TaskStore",
-			"retrieveData",
-			"getData"
+			"date_from"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1413,24 +1401,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "PlayerCubeSense.cs",
-					"semi_transient": false,
+					"file": "MoveCube.cs",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 302,
+						"buffer_size": 1643,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								291,
-								291
+								959,
+								959
 							]
 						],
 						"settings":
@@ -1438,104 +1426,16 @@
 							"syntax": "Packages/C#/C#.tmLanguage",
 							"vintage":
 							{
-								"_vintageous_glue_until_normal_mode": false,
 								"action": null,
 								"action_count": "",
 								"mode": "mode_normal",
 								"motion": null,
 								"motion_count": "",
 								"must_capture_register_name": false,
-								"normal_insert_count": "1",
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 8
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "RestartFromCheckpoint.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 313,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 23
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "MoveToNextPoint.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 728,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								595,
-								595
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 0
+								"xpos": 49
 							}
 						},
 						"translation.x": 0.0,
@@ -2677,9 +2577,9 @@
 		}
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 323.0,
 	"status_bar_visible": true,
 	"template_settings":
