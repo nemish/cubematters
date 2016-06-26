@@ -4,8 +4,8 @@ using NodeCanvas.Framework;
 
 public class PlayerCubeSense : MonoBehaviour {
 
-    void OnCollisionEnter(Collision collision){
-        if (collision.gameObject.tag == Constants.enemyTag) {
+    void OnTriggerEnter(Collider other){
+        if (other.gameObject.tag == Constants.enemyTag) {
             Graph.SendGlobalEvent("EnemyTouched");
         }
     }

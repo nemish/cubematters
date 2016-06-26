@@ -4,20 +4,256 @@
 		"selected_items":
 		[
 			[
+				"chil",
+				"child"
+			],
+			[
+				"pla",
+				"player2.position"
+			],
+			[
+				"trans",
+				"transform.position"
+			],
+			[
+				"init",
+				"initialCamY"
+			],
+			[
+				"player",
+				"player2"
+			],
+			[
+				"pos",
+				"position	(Spawn.cs)"
+			],
+			[
+				"Sys",
+				"System.Collections	(SenseChecker.cs)"
+			],
+			[
+				"Tran",
+				"Transform	(IsPlayerTooFar.cs)"
+			],
+			[
+				"back",
+				"backChecker"
+			],
+			[
+				"lef",
+				"leftChecker"
+			],
+			[
+				"chec",
+				"checker"
+			],
+			[
+				"pro",
+				"protected"
+			],
+			[
+				"IsMo",
+				"IsMovingOnSomething"
+			],
+			[
+				"_to",
+				"_touchingEnemy"
+			],
+			[
+				"in",
+				"instantiatedPart"
+			],
+			[
+				"con",
+				"container2"
+			],
+			[
+				"create",
+				"createContainer"
+			],
+			[
+				"Set",
+				"SetActiveRecursively"
+			],
+			[
+				"Tra",
+				"Transform"
+			],
+			[
+				"conta",
+				"container1"
+			],
+			[
+				"getC",
+				"getCamPosition	(CameraAim.cs)"
+			],
+			[
+				"getCam",
+				"getCamHeight"
+			],
+			[
+				"inicam",
+				"initialCamOffset"
+			],
+			[
+				"GetCom",
+				"GetComponent	(MoveSphere.cs)"
+			],
+			[
+				"cam",
+				"cameraAimAPI"
+			],
+			[
+				"cur",
+				"currentPosition"
+			],
+			[
+				"enem",
+				"enemyCube"
+			],
+			[
+				"enm",
+				"enemyCube"
+			],
+			[
+				"enemy",
+				"enemyCube"
+			],
+			[
+				"cure",
+				"currentOffsetY"
+			],
+			[
+				"Ran",
+				"Random"
+			],
+			[
+				"pathFil",
+				"pathFillers"
+			],
+			[
+				"getCu",
+				"GetCurrentStep"
+			],
+			[
+				"dire",
+				"direction"
+			],
+			[
+				"nextP",
+				"nextPoint"
+			],
+			[
+				"GetCu",
+				"getCurrentDirection"
+			],
+			[
+				"nextPo",
+				"nextPointOffsetVector"
+			],
+			[
+				"Inc",
+				"IncreaseIndex"
+			],
+			[
+				"Ha",
+				"HandleObstacle"
+			],
+			[
+				"SetCu",
+				"setCurrentStepLine"
+			],
+			[
+				"ob",
+				"obstacleOffset"
+			],
+			[
+				"curre",
+				"currentStep"
+			],
+			[
+				"curr",
+				"currentStep"
+			],
+			[
+				"GetOb",
+				"getObstacleOffsetPointVector"
+			],
+			[
+				"will",
+				"willCollideWithObstacleOnMove"
+			],
+			[
+				"Vector3",
+				"Vector3	(MoveCube.cs)"
+			],
+			[
+				"for",
+				"foreach	ForEach"
+			],
+			[
+				"Tuple",
+				"TupleList"
+			],
+			[
+				"Vecto",
+				"Vector3"
+			],
+			[
+				"getCh",
+				"getCheckerOffsetVector"
+			],
+			[
+				"move",
+				"moveDistance"
+			],
+			[
+				"Ve",
+				"Vector3	(MoveCube.cs)"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"obs",
+				"obstacleLayerMask"
+			],
+			[
+				"Vec",
+				"Vector3"
+			],
+			[
+				"c",
+				"currentDirection"
+			],
+			[
+				"opp",
+				"oppositeDirections"
+			],
+			[
+				"pri",
+				"primaryStep"
+			],
+			[
+				"op",
+				"oppositeDirections"
+			],
+			[
+				"Di",
+				"Direction"
+			],
+			[
+				"tra",
+				"transform"
+			],
+			[
 				"traPo",
 				"targetPointIndex"
 			],
 			[
 				"tarpo",
 				"targetPointIndex"
-			],
-			[
-				"Tran",
-				"Transform"
-			],
-			[
-				"pro",
-				"protected	(RestartFromCheckpoint.cs)"
 			],
 			[
 				"OnCol",
@@ -58,10 +294,6 @@
 			[
 				"compo",
 				"componentDidUnMount	(GridReport.react.js)"
-			],
-			[
-				"init",
-				"initialParams"
 			],
 			[
 				"commi",
@@ -232,10 +464,6 @@
 				"contract"
 			],
 			[
-				"con",
-				"contract"
-			],
-			[
 				"fin",
 				"finance	(crm_contract_seller_info.py)"
 			],
@@ -248,20 +476,12 @@
 				"done_transfer"
 			],
 			[
-				"trans",
-				"transmission_date	(CASalesReport.react.js)"
-			],
-			[
 				"WEB_A",
 				"WEB_ANALYTICS_CALLTOUCH_ID	(product.py)"
 			],
 			[
 				"crm_br",
 				"crm_brief_document	(crm_briefs.py)"
-			],
-			[
-				"cur",
-				"cursor"
 			],
 			[
 				"time",
@@ -294,236 +514,81 @@
 			[
 				"comm",
 				"commercial_analytics	(urls.py)"
-			],
-			[
-				"ana",
-				"analytics"
-			],
-			[
-				"Bil",
-				"BillingPeriod	class"
-			],
-			[
-				"class",
-				"className"
-			],
-			[
-				"servi",
-				"service_type"
-			],
-			[
-				"seri",
-				"service_type"
-			],
-			[
-				"dep",
-				"departments"
-			],
-			[
-				"dy",
-				"dynamic_refund_amount"
-			],
-			[
-				"Refree",
-				"RefundRequestError"
-			],
-			[
-				"addi",
-				"additional_contracts"
-			],
-			[
-				"parent_",
-				"parent_contract_id"
-			],
-			[
-				"griu",
-				"gridUtils"
-			],
-			[
-				"comp",
-				"components	(app.js)"
-			],
-			[
-				"aggi",
-				"agGridGlobalFunc('#myGrid"
-			],
-			[
-				"cu",
-				"currentReport"
-			],
-			[
-				"repor",
-				"reportsDict"
-			],
-			[
-				"Про",
-				"Производство"
-			],
-			[
-				"CAS",
-				"CASalesReport	(app.js)"
-			],
-			[
-				"Ro",
-				"Route"
-			],
-			[
-				"de",
-				"department"
-			],
-			[
-				"Anal",
-				"AnalyticsApp	(app.js)"
-			],
-			[
-				"anal",
-				"analytics_index"
-			],
-			[
-				"info",
-				"info_getter"
-			],
-			[
-				"ref",
-				"refund_amount"
-			],
-			[
-				"calfo",
-				"calculate_for_acts	(saldo_calculator.py)"
-			],
-			[
-				"mod",
-				"model_instance"
-			],
-			[
-				"project_le",
-				"project_leave	module"
-			],
-			[
-				"ProjectLe",
-				"ProjectLeaveInfo	(project_leave.py)"
-			],
-			[
-				"debt",
-				"debt_amount"
-			],
-			[
-				"BaseF",
-				"BaseFormPanel	(common.js)"
-			],
-			[
-				"decrip",
-				"description_pattern"
-			],
-			[
-				"service_name_",
-				"service_name_pattern"
-			],
-			[
-				"Paymetn",
-				"PaymentType	class"
-			],
-			[
-				"descrip",
-				"description_pattern	(billing_period_type_product.py)"
-			],
-			[
-				"invoice_title_",
-				"invoice_title_data"
-			],
-			[
-				"Paym",
-				"PaymentType	(payment.py)"
-			],
-			[
-				"BillperTy",
-				"BillingPeriodType	(billing_period_type_product.py)"
-			],
-			[
-				"intipa",
-				"invoiceTitlePatternField"
-			],
-			[
-				"invtit",
-				"invoiceTitlePatternField"
-			],
-			[
-				"sertipa",
-				"serviceTitlePatternField"
-			],
-			[
-				"requi",
-				"requiredActInfoItems"
-			],
-			[
-				"billin",
-				"billing_period"
-			],
-			[
-				"requfi",
-				"requiredFinanceField"
-			],
-			[
-				"actIn",
-				"actInfoFieldSet"
-			],
-			[
-				"getadd",
-				"getActAdditionalInfoFieldSet"
-			],
-			[
-				"fie",
-				"fieldset"
-			],
-			[
-				"actInf",
-				"actAdditionalInfoFieldSet"
-			],
-			[
-				"Ag",
-				"AgencyFactory"
-			],
-			[
-				"availfi",
-				"availableFieldName"
-			],
-			[
-				"service_in",
-				"service_title_pattern	(billing_period.py)"
-			],
-			[
-				"tot",
-				"total_traffic"
-			],
-			[
-				"thi",
-				"third_period"
-			],
-			[
-				"custom_te",
-				"custom_type_title	(billing_period.py)"
-			],
-			[
-				"month",
-				"monthly_fee"
-			],
-			[
-				"наи",
-				"наименования"
-			],
-			[
-				"наим",
-				"наименования	(billing_period.py)"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "MoveCube.cs",
+			"file": "Constants.cs",
 			"settings":
 			{
-				"buffer_size": 1643,
+				"buffer_size": 199,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Spawn.cs",
+			"settings":
+			{
+				"buffer_size": 1115,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "EnemyBuilder.cs",
+			"settings":
+			{
+				"buffer_size": 618,
+				"line_ending": "Unix",
+				"name": "using UnityEngine;"
+			}
+		},
+		{
+			"file": "CanComplexPlayerMove.cs",
+			"settings":
+			{
+				"buffer_size": 946,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "InitCamParams.cs",
+			"settings":
+			{
+				"buffer_size": 413,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CameraAim.cs",
+			"settings":
+			{
+				"buffer_size": 1764,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MoveToPlayer.cs",
+			"settings":
+			{
+				"buffer_size": 881,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "IsMovingOnObstacle.cs",
+			"settings":
+			{
+				"buffer_size": 1927,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "InitPlayerBehaviourTree.cs",
+			"settings":
+			{
+				"buffer_size": 530,
 				"line_ending": "Unix"
 			}
 		}
@@ -877,17 +942,31 @@
 	],
 	"file_history":
 	[
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/InitCamParams.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/ObstacleChecker.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/DisableAll.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToPlayer.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveCube.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/SenseChecker.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/IsMovingOnObstacle.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/DeathSpawner.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/IsMovingOnEnemy.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveSphere.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveDirection.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveLogical.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/CameraAim.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerDeath.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/Spawn",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToNextPoint.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerCubeSense.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/ObstacleCheker.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveLogical",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/FollowTarget.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/ChildrenBoxColliderToggle.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToNextPoint.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/RestartFromCheckpoint.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerCubeSense.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/ChildrenBoxColliderToggle",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveCube.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveEnemy.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/Constants.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/SenseChecker.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToPlayer.cs",
 		"/Users/nemish/projects/Kit2/147403",
 		"/Users/nemish/projects/Kit2/analytics/js/commercial_analytics/components/CAInworkReport.react.js",
 		"/Users/nemish/projects/Kit2/analytics/js/stores/DatesStore.js",
@@ -990,25 +1069,11 @@
 		"/Users/nemish/projects/Kit2/finance/api/refund_request/api.py",
 		"/Users/nemish/projects/Kit2/util/exceptions/common_exceptions.py",
 		"/Users/nemish/projects/Kit2/finance/models/payment.py",
-		"/Users/nemish/projects/Kit2/analytics/static/analytics/bower_components/ag-grid/dist/ag-grid.js",
-		"/Users/nemish/projects/Kit2/kit2/kit/models/payment.py",
-		"/Users/nemish/projects/Kit2/salary/static/salary/js/analytics.js",
-		"/Users/nemish/projects/Kit2/analytics/.bowerrc",
-		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/workspace/clients/customer_window.js",
-		"/Users/nemish/projects/Kit2/kit2/urls.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/tests/api/test_project_leaves.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/components/common.js",
-		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/components/edit_windows.js",
-		"/Users/nemish/projects/Kit2/kit2/kit/models/site.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/api/site/api.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/object_window.js",
-		"/Users/nemish/projects/Kit2/kit2/kit/lib/project_leave.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/workspace/debts.js",
-		"/Users/nemish/projects/Kit2/kit2/kit/tests/lib/test_project_leave_info.py"
+		"/Users/nemish/projects/Kit2/analytics/static/analytics/bower_components/ag-grid/dist/ag-grid.js"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -1128,6 +1193,93 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"player2 == null",
+			"IsPlayerTooFar",
+			"_touchingEnemy = true",
+			"backwardChecker",
+			"forwardChecker",
+			"forward",
+			"left",
+			"void check",
+			"IsTouchingObstacle",
+			"_touchingObstacle",
+			"true",
+			"xpos",
+			"player1",
+			"container1",
+			"instantiatedPart",
+			"MoveSphere",
+			"rotateSpeed",
+			"direction",
+			"speed",
+			"int",
+			"currentOffsetY",
+			"UnitEngine",
+			"enemy",
+			"count",
+			"currentIndex",
+			"current",
+			"Log",
+			"Debug.Log",
+			"void GetDirection",
+			"DecIndex",
+			"invertIndexMethod",
+			"IncIndex",
+			"updateIndex",
+			"UpdateIndex",
+			"currentStep",
+			"(bool applyExpensiveChanges = false)",
+			"Decreasing",
+			"getOppositeUpdateIndexMethod",
+			"directedSteps[currentIndex].dir",
+			"[0]",
+			"increaseIndex",
+			"IncreaseIndex",
+			"delegate",
+			"GetCurrentDirection",
+			"Vector3",
+			"public ",
+			"currentStep",
+			"GetOppositeDirection",
+			"_getOppositeDirection",
+			"public",
+			"BBParameter<",
+			"setNextDirection",
+			"setCurrentStep",
+			".Direction",
+			"v",
+			"currentVector",
+			"getNextPointOffsetByObstacle",
+			"direction",
+			"dir",
+			"currentVector",
+			"step",
+			"getCheckDistance",
+			"getObstacleOffsetPointVector",
+			"getNearestToObstaclePoint",
+			"currentVector",
+			"nextPointDirectionVector",
+			"nextPointLine",
+			"getOffsetVector",
+			"Left",
+			"getCheckDistance",
+			"_getOppositeDirection()",
+			"initialDirection",
+			"moveDistance",
+			"new ",
+			"Vector",
+			"Direction",
+			"left",
+			"Left",
+			"xStep",
+			"yStep",
+			"direction",
+			"oppositeStep",
+			"add",
+			"updateNextPoint",
+			"sequence",
+			"changePointType",
+			"nextPointSequenced",
 			"SendEvent",
 			"Collider",
 			"BoxCollider",
@@ -1168,94 +1320,7 @@
 			"filtered",
 			"can_view_analytics_salary",
 			"can_view_ca_analytics",
-			" ",
-			"aggProjects",
-			"projectsFn",
-			"summaryGridConfig",
-			"initGrid",
-			"summaryColumnDefs",
-			"calcSummary",
-			"Summary",
-			"_getSummaryGridId",
-			"_get_ca_products",
-			"first_transfer.timestamp.date()",
-			"self.",
-			"get_briefs_ids",
-			"_get_data",
-			"BriefsGetter",
-			"self.",
-			"_get_transferred_briefs_ids",
-			"DatesPeriod",
-			"CommercialAnalyticsAPI",
-			"import ipdb;",
-			"float",
-			"CASalesReport",
-			"enableHeaderFlow",
-			"_filter_invoices_created_after_brief",
-			"_filter_infos_by_brief",
-			"brief",
-			"sale_project.",
-			"enableHeaderFlow",
-			"makeHeaderFlow",
-			"react-sticky",
-			"object-assign",
-			"top",
-			"console.log('scroll')",
-			"filteredNodes",
-			"find('",
-			"find(",
-			"nodes",
-			"calcSummary",
-			"updateDimensions",
-			"'data.'",
-			"vm[config.gridName]",
-			"grid",
-			"makeSummaryRow",
-			"'font-weight': 'bold'",
-			"rowStyleFunc",
-			"briefsGroupingFunction",
-			"sm",
-			";",
-			"class",
-			"innerRenderer: function",
-			".analytics-grid ",
-			"-primary",
-			"_briefs",
-			"contract",
-			"brief.",
-			"contracts_with_invoices",
-			"paid_contracts",
-			"all_contracts",
-			"primary_invoices",
-			"sale_project",
-			".select_related('invoice')",
-			"dt",
-			"it",
-			"pi",
-			"Contract.objects.filter",
-			"brief",
-			".date",
-			"product_class",
-			"_get_serialized_brief",
-			"flat",
-			"SalesReportStore",
-			"_data",
-			"ft",
-			"in_work",
-			"first_transfer",
-			"user =",
-			"Ответ",
-			"main_domain",
-			"__",
-			" ",
-			"sale_p",
-			"contracts",
-			"in_work_transers",
-			"in_work_changes",
-			"SalesAnalyticsHandler",
-			"get_slave_connection",
-			"get_slave_connections",
-			"date_from"
+			" "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1401,29 +1466,204 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "MoveCube.cs",
-					"semi_transient": true,
+					"file": "Constants.cs",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1643,
+						"buffer_size": 199,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								959,
-								959
+								187,
+								187
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/C#/C#.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 38
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Spawn.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								423,
+								423
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_non_interactive": false,
+								"_vintageous_processing_notation": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 35
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "EnemyBuilder.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"auto_name": "using UnityEngine;",
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 15
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "CanComplexPlayerMove.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 53
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "InitCamParams.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 413,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
 							"vintage":
 							{
 								"action": null,
@@ -1435,7 +1675,182 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 49
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "CameraAim.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1764,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1638,
+								1638
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_non_interactive": false,
+								"_vintageous_processing_notation": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 12
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 311.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "MoveToPlayer.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "IsMovingOnObstacle.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1927,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "InitPlayerBehaviourTree.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 530,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								386,
+								386
+							]
+						],
+						"settings":
+						{
+							"highlight_line": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_non_interactive": false,
+								"_vintageous_processing_notation": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
 							}
 						},
 						"translation.x": 0.0,
@@ -1505,6 +1920,82 @@
 		"selected_items":
 		[
 			[
+				"ini",
+				"InitCamParams.cs"
+			],
+			[
+				"init",
+				"InitCamParams.cs"
+			],
+			[
+				"ismo",
+				"IsMovingOnObstacle.cs"
+			],
+			[
+				"motopl",
+				"MoveToPlayer.cs"
+			],
+			[
+				"cam",
+				"CameraAim.cs"
+			],
+			[
+				"sens",
+				"SenseChecker.cs"
+			],
+			[
+				"movecu",
+				"MoveCube.cs"
+			],
+			[
+				"cons",
+				"Constants.cs"
+			],
+			[
+				"sense",
+				"SenseChecker.cs"
+			],
+			[
+				"movedi",
+				"MoveDirection.cs"
+			],
+			[
+				"plade",
+				"PlayerDeath.cs"
+			],
+			[
+				"dea",
+				"DeathSpawner.cs"
+			],
+			[
+				"pla",
+				"PlayerDeath.cs"
+			],
+			[
+				"spa",
+				"Spawn.cs"
+			],
+			[
+				"ob",
+				"ObstacleChecker.cs"
+			],
+			[
+				"o",
+				"ObstacleCheker.cs"
+			],
+			[
+				"movlo",
+				"MoveLogical.cs"
+			],
+			[
+				"moton",
+				"MoveToNextPoint.cs"
+			],
+			[
+				"motone",
+				"MoveToNextPoint.cs"
+			],
+			[
 				"charjs",
 				"kit2/kit/templates/js/workspace/charges.js"
 			],
@@ -1515,10 +2006,6 @@
 			[
 				"bilperac",
 				"deploy/mysql/billing_period_act.sql"
-			],
-			[
-				"cons",
-				"analytics/js/constants.js"
 			],
 			[
 				"refbu",
@@ -1943,78 +2430,6 @@
 			[
 				"hehtml",
 				"salary/static/salary/partials/header.html"
-			],
-			[
-				"seleh",
-				"htdocs/static/salary/partials/month_select.html"
-			],
-			[
-				"anaumon",
-				"salary/static/salary/partials/analytics_user_month.html"
-			],
-			[
-				"angridi",
-				"salary/static/salary/js/analytics_grid_directive.js"
-			],
-			[
-				"userview",
-				"salary/static/salary/js/user_view_controller.js"
-			],
-			[
-				"salasty",
-				"salary/static/salary/css/styles.css"
-			],
-			[
-				"calltomon",
-				"salary/static/salary/js/calltouch_month_view_controller.js"
-			],
-			[
-				"callhtml",
-				"salary/static/salary/partials/calltouch_analytics_month.html"
-			],
-			[
-				"0151",
-				"kit2/kit/migrations/0151_auto_20151006_1630.py"
-			],
-			[
-				"0149",
-				"kit2/kit/migrations/0149_auto_20151005_1715.py"
-			],
-			[
-				"0155_auto_20151009_1149",
-				"kit2/kit/migrations/0155_auto_20151009_1149.py"
-			],
-			[
-				"0149_auto_20151005_1825",
-				"kit2/kit/migrations/0149_auto_20151005_1825.py"
-			],
-			[
-				"griu",
-				"salary/static/salary/js/grid_utils.js"
-			],
-			[
-				"monvicon",
-				"salary/static/salary/js/month_view_controller.js"
-			],
-			[
-				"anamo",
-				"salary/static/salary/partials/analytics_month.html"
-			],
-			[
-				"inc",
-				"salary/static/salary/js/income_grid_service.js"
-			],
-			[
-				"anamonde",
-				"salary/static/salary/partials/analytics_month_detail.html"
-			],
-			[
-				"inservic",
-				"salary/static/salary/js/income_service.js"
-			],
-			[
-				"ussaer",
-				"salary/static/salary/js/user_salary_service.js"
 			]
 		],
 		"width": 0.0
@@ -2050,10 +2465,14 @@
 	},
 	"select_symbol":
 	{
-		"height": 392.0,
-		"last_filter": "char",
+		"height": 47.0,
+		"last_filter": "movedir",
 		"selected_items":
 		[
+			[
+				"movedir",
+				"MoveDirection"
+			],
 			[
 				"char",
 				"Charge"
@@ -2561,25 +2980,27 @@
 			[
 				"contsell",
 				"CrmContractSellerInfo"
-			],
-			[
-				"delayno",
-				"DelayedNotification"
 			]
 		],
-		"width": 760.0
+		"width": 392.0
 	},
 	"selected_group": 0,
 	"settings":
 	{
+		"_vintageous_last_buffer_search": "IsMovingOnSomething",
+		"_vintageous_last_buffer_search_command": "vi_star",
+		"_vintageous_last_char_search_command": "vi_big_f",
+		"_vintageous_last_character_search": "j",
+		"_vintageous_reset_during_init": true,
 		"vintage":
 		{
+			"_cmdline_cd": "/Users/nemish/projects/unity/cubematters/Assets/scripts"
 		}
 	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 323.0,
 	"status_bar_visible": true,
 	"template_settings":

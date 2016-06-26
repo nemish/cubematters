@@ -10,7 +10,6 @@ namespace cubematters {
         public BBParameter<Transform> player;
         public BBParameter<Vector3> offset;
 
-
 		protected override void OnExecute(){
             offset.value = agent.transform.position - player.value.position;
 			EndAction(true);
