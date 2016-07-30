@@ -7,7 +7,7 @@ using ParadoxNotion.Design;
 
 [Category("Player actions")]
 public class IsMovingOnObstacle : IsMovingOnSomething {
-    protected override bool check(SenseChecker checker) {
+    protected override bool checkByChecker(SenseChecker checker) {
         return checker.IsTouchingObstacle();
     }
 }
@@ -15,7 +15,7 @@ public class IsMovingOnObstacle : IsMovingOnSomething {
 
 [Category("Player actions")]
 public class IsMovingOnEnemy : IsMovingOnSomething {
-    protected override bool check(SenseChecker checker) {
+    protected override bool checkByChecker(SenseChecker checker) {
         return checker.IsTouchingEnemy();
     }
 }
@@ -23,7 +23,7 @@ public class IsMovingOnEnemy : IsMovingOnSomething {
 
 [Category("Player actions")]
 public class IsMovingOnObstacleComplex : IsMovingOnSomething {
-    protected override bool check(SenseChecker checker) {
+    protected override bool checkByChecker(SenseChecker checker) {
         return checker.IsTouchingObstacle();
     }
 }
@@ -32,12 +32,13 @@ public class IsMovingOnObstacleComplex : IsMovingOnSomething {
 public class IsMovingOnSomething : ConditionTask {
 
     public BBParameter<string> direction;
+    protected string[]  directions = {"left", "right", "forward", "backward"};
     public BBParameter<Transform> leftChecker;
     public BBParameter<Transform> rightChecker;
     public BBParameter<Transform> frontChecker;
     public BBParameter<Transform> backChecker;
 
-    private Dictionary<string, SenseChecker> checkers = new Dictionary<string, SenseChecker>();
+    protected Dictionary<string, SenseChecker> checkers = new Dictionary<string, SenseChecker>();
 
     protected override string OnInit() {
         leftChecker = agent.transform.Find("LeftChecker");
@@ -52,10 +53,17 @@ public class IsMovingOnSomething : ConditionTask {
     }
 
     protected override bool OnCheck() {
-        return check(checkers[direction.value]);
+        if (direction.value == null) {
+            return checkCommon();
+        }
+        return checkByChecker(checkers[direction.value]);
     }
 
-    protected virtual bool check(SenseChecker checker) {
+    protected virtual bool checkByChecker(SenseChecker checker) {
+        return false;
+    }
+
+    protected virtual bool checkCommon() {
         return false;
     }
 }

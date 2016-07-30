@@ -60,6 +60,10 @@ public class CameraAim : MonoBehaviour {
     }
 
     private void Update() {
+        if (player1 == null) {
+            return;
+        }
+
         if (isSingleCube()) {
             transform.position = player1.position;
         } else {

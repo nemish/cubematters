@@ -1,29 +1,42 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
+
 
 public class CubeManager : MonoBehaviour {
 
-    private Transform leftChecker;
-    private Transform rightChecker;
-    private Transform frontChecker;
-    private Transform backChecker;
-
-    private Dictionary<string, SenseChecker> checkers = new Dictionary<string, SenseChecker>();
+    private static CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+    private static TextInfo textInfo = cultureInfo.TextInfo;
+    private List<Transform> checkers = new List<Transform>();
 
     private void Start() {
-        leftChecker = transform.Find("LeftChecker");
-        rightChecker = transform.Find("RightChecker");
-        frontChecker = transform.Find("FrontChecker");
-        backChecker = transform.Find("BackChecker");
-        checkers.Add("left", leftChecker.GetComponent<SenseChecker>());
-        checkers.Add("right", rightChecker.GetComponent<SenseChecker>());
-        checkers.Add("forward", frontChecker.GetComponent<SenseChecker>());
-        checkers.Add("backward", backChecker.GetComponent<SenseChecker>());
+        foreach (Transform child in transform) {
+            if (child.tag == Constants.playerSenseTag) {
+                checkers.Add(child);
+            }
+        }
     }
 
     public bool CanMoveToDirection(string direction) {
-        SenseChecker checker = checkers[direction];
-        return !checker.IsTouchingObstacle();
+        string checkerName = textInfo.ToTitleCase(direction) + "Checker";
+        SenseChecker checker = transform.Find(checkerName).GetComponent<SenseChecker>();
+        return checker.ObstacleOk() && !checker.IsTouchingOtherPlayer();
+    }
+
+    public bool IsTouchingOtherPlayCubeAnywhere() {
+        foreach (Transform checker in checkers) {
+            SenseChecker sense = checker.GetComponent<SenseChecker>();
+            if (sense.IsTouchingOtherPlayer()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool IsOnGround() {
+        return !CanMoveToDirection("down");
     }
 }

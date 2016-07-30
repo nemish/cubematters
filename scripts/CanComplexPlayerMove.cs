@@ -11,23 +11,36 @@ public class CanComplexPlayerMove : ConditionTask {
     public BBParameter<string> direction;
 
     protected override string OnInit() {
-        Debug.Log(String.Format("Hello! {0}", childCubes));
         return null;
     }
 
     protected override bool OnCheck() {
-        bool canMove = true;
+        bool check = true;
         foreach (Transform cube in childCubes.value) {
             CubeManager mgr = cube.GetComponent<CubeManager>();
             if (!mgr.CanMoveToDirection(direction.value)) {
-                return false;
+                check = false;
+                break;
             }
         }
-        return true;
-        // Vector3 currentOffset = agent.transform.position - player.value.position - offset.value;
-        // if ((Mathf.Abs(currentOffset.x) > offsetX.value) || (Mathf.Abs(currentOffset.y) > offsetY.value) || (Mathf.Abs(currentOffset.z) > offsetZ.value)) {
-        //     return true;
-        // }
-        // return false;
+        return check;
+    }
+}
+
+
+
+[Category("Player actions")]
+public class IsTouchingOtherPlayCube : CanComplexPlayerMove {
+
+    protected override bool OnCheck() {
+        bool check = false;
+        foreach (Transform cube in childCubes.value) {
+            CubeManager mgr = cube.GetComponent<CubeManager>();
+            if (mgr.IsTouchingOtherPlayCubeAnywhere()) {
+                check = true;
+                break;
+            }
+        }
+        return check;
     }
 }

@@ -5,9 +5,10 @@ using NodeCanvas.Framework;
 public class PlayerCubeSense : MonoBehaviour {
 
     void OnTriggerEnter(Collider other){
-        if (other.gameObject.tag == Constants.enemyTag) {
-            Graph.SendGlobalEvent("EnemyTouched");
+        if (System.Array.IndexOf(Constants.PlayerDeathTags, other.gameObject.tag) != -1) {
+            Debug.Log("WE ARE GOING TO SEND EVENT!!!");
+            // Graph.SendGlobalEvent(Constants.PlayerDeadEvent);
+            Graph.SendGlobalEvent("PlayerDeadEvent");
         }
     }
-
 }

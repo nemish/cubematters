@@ -21,7 +21,7 @@ public class MoveToPlayer : ActionTask {
     }
 
     protected override void OnUpdate(){
-        Vector3 targetPos = cameraAimAPI.getCamPosition();
+        Vector3 targetPos = cameraAimAPI.getCamPosition() + Vector3.back * 2;
         agent.transform.position = Vector3.Lerp(agent.transform.position, targetPos, Time.deltaTime);
 
         if (Vector3.Distance(agent.transform.position, targetPos) < 0.1f) {
