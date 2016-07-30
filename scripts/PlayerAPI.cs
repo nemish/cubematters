@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 
 public class PlayerAPI : MonoBehaviour {
@@ -22,5 +23,17 @@ public class PlayerAPI : MonoBehaviour {
             Instantiate(explosion, child.position + new Vector3(-0.5f, -0.5f, -0.5f), Random.rotation);
         }
         // Destroy(gameObject);
+    }
+
+    public List<Transform> GetTouchingOtherPlayCubes() {
+        List<Transform> touchingCubes = new List<Transform>();
+        foreach (Transform child in childCubes) {
+            CubeManager mgr = child.GetComponent<CubeManager>();
+            foreach (Transform cube in mgr.GetPlayCubesInTouch()) {
+                touchingCubes.Add(cube);
+            }
+        }
+        // return new HashSet<Transform>(touchingCubes).ToList();
+        return touchingCubes.Distinct().ToList();
     }
 }

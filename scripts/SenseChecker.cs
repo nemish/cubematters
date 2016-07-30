@@ -7,6 +7,7 @@ public class SenseChecker : MonoBehaviour {
     private bool _touchingEnemy = false;
     private bool _touchingPlayer = false;
     private bool _isOtherPlayer = false;
+    private Transform _otherPlayCube;
 
     void OnTriggerStay(Collider other){
         if (other.gameObject.tag == Constants.obstacleTag) {
@@ -16,6 +17,7 @@ public class SenseChecker : MonoBehaviour {
         } else if (isPlayer(other)) {
             _touchingPlayer = true;
             _isOtherPlayer = transform.parent.parent != other.transform.parent.parent;
+            _otherPlayCube = other.transform.parent;
         }
     }
 
@@ -27,6 +29,7 @@ public class SenseChecker : MonoBehaviour {
         } else if (isPlayer(other)) {
             _touchingPlayer = true;
             _isOtherPlayer = transform.parent.parent != other.transform.parent.parent;
+            _otherPlayCube = other.transform.parent;
         }
     }
 
@@ -38,6 +41,7 @@ public class SenseChecker : MonoBehaviour {
         } else if (isPlayer(other)) {
             _touchingPlayer = false;
             _isOtherPlayer = false;
+            _otherPlayCube = null;
         }
     }
 
@@ -47,6 +51,10 @@ public class SenseChecker : MonoBehaviour {
 
     public bool IsTouchingOtherPlayer() {
         return _isOtherPlayer;
+    }
+
+    public Transform GetTouchingPlayCube() {
+        return _otherPlayCube;
     }
 
     public bool IsTouchingPlayer() {
