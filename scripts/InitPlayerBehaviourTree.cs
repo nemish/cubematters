@@ -11,11 +11,9 @@ public class InitPlayerBehaviourTree : ActionTask {
     public BBParameter<List<Transform>> childCubes;
 
     protected override void OnExecute(){
-        foreach (Transform child in agent.transform) {
-            if (child.tag == "Player") {
-                childCubes.value.Add(child);
-            }
-        }
+        PlayerAPI api = agent.transform.GetComponent<PlayerAPI>();
+        api.InitAPI();
+        childCubes.value = api.GetChildPlayCubes();
         EndAction(true);
     }
 

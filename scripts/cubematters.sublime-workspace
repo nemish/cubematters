@@ -4,28 +4,132 @@
 		"selected_items":
 		[
 			[
+				"ac",
+				"actedCube"
+			],
+			[
+				"Cub",
+				"CubeManager"
+			],
+			[
+				"Tran",
+				"Transform"
+			],
+			[
+				"hit",
+				"hitLayer"
+			],
+			[
+				"GetCo",
+				"GetComponent	type"
+			],
+			[
+				"cam",
+				"camera"
+			],
+			[
+				"joi",
+				"joinColor"
+			],
+			[
+				"Rend",
+				"Renderer"
+			],
+			[
+				"play",
+				"playerCube"
+			],
+			[
 				"pla",
-				"player1"
+				"playerCube"
+			],
+			[
+				"other",
+				"otherPlayCube"
+			],
+			[
+				"Trans",
+				"Transform	(CubeManager.cs)"
+			],
+			[
+				"ch",
+				"checkers"
+			],
+			[
+				"Tra",
+				"Transform	(CubeManager.cs)"
+			],
+			[
+				"IsTo",
+				"IsTouchingOtherPlayer	(CubeManager.cs)"
+			],
+			[
+				"Can",
+				"CanComplexPlayerMove"
+			],
+			[
+				"IsToO",
+				"IsTouchingOtherPlayCube	(CubeManager.cs)"
+			],
+			[
+				"Is",
+				"IsTouchingOtherPlayer"
+			],
+			[
+				"chek",
+				"checkers"
+			],
+			[
+				"che",
+				"checkers"
+			],
+			[
+				"for",
+				"foreach	ForEach"
+			],
+			[
+				"dire",
+				"directions"
+			],
+			[
+				"chec",
+				"checkCommon"
+			],
+			[
+				"back",
+				"backward"
+			],
+			[
+				"IsTou",
+				"IsTouchingPlayer	(SenseChecker.cs)"
+			],
+			[
+				"init",
+				"initialPosition"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"Vec",
+				"Vector3"
+			],
+			[
+				"chi",
+				"child"
+			],
+			[
+				"chil",
+				"childCubes"
 			],
 			[
 				"Play",
 				"PlayerAPI"
 			],
 			[
-				"Tra",
-				"Transform	(MoveToPlayer.cs)"
-			],
-			[
 				"str",
 				"string	(IsMovingOnObstacle.cs)"
-			],
-			[
-				"IsToO",
-				"IsTouchingOtherPlayer	(SenseChecker.cs)"
-			],
-			[
-				"IsTo",
-				"IsTouchingObstacle"
 			],
 			[
 				"exc",
@@ -42,10 +146,6 @@
 			[
 				"childs",
 				"childCubes"
-			],
-			[
-				"chil",
-				"child"
 			],
 			[
 				"ed",
@@ -76,10 +176,6 @@
 				"edgeChildPos"
 			],
 			[
-				"Tran",
-				"Transform"
-			],
-			[
 				"co",
 				"coordinatGetter"
 			],
@@ -90,10 +186,6 @@
 			[
 				"Sys",
 				"System.Collections.Generic	(CanComplexPlayerMove.cs)"
-			],
-			[
-				"init",
-				"initialCamOffset"
 			],
 			[
 				"trans",
@@ -108,16 +200,8 @@
 				"position	(Spawn.cs)"
 			],
 			[
-				"back",
-				"backChecker"
-			],
-			[
 				"lef",
 				"leftChecker"
-			],
-			[
-				"chec",
-				"checker"
 			],
 			[
 				"pro",
@@ -168,10 +252,6 @@
 				"GetComponent	(MoveSphere.cs)"
 			],
 			[
-				"cam",
-				"cameraAimAPI"
-			],
-			[
 				"cur",
 				"currentPosition"
 			],
@@ -202,10 +282,6 @@
 			[
 				"getCu",
 				"GetCurrentStep"
-			],
-			[
-				"dire",
-				"direction"
 			],
 			[
 				"nextP",
@@ -256,10 +332,6 @@
 				"Vector3	(MoveCube.cs)"
 			],
 			[
-				"for",
-				"foreach	ForEach"
-			],
-			[
 				"Tuple",
 				"TupleList"
 			],
@@ -286,10 +358,6 @@
 			[
 				"obs",
 				"obstacleLayerMask"
-			],
-			[
-				"Vec",
-				"Vector3"
 			],
 			[
 				"c",
@@ -432,10 +500,6 @@
 				"NotImplementedError	class"
 			],
 			[
-				"tran",
-				"transferred	(urls.py)"
-			],
-			[
 				"calc",
 				"calc_day_by_type_from_period	(production_calendar.py)"
 			],
@@ -450,75 +514,77 @@
 			[
 				"enaS",
 				"enableSelectAggRow	(GridReport.react.js)"
-			],
-			[
-				"prima",
-				"primary_invoice"
-			],
-			[
-				"primary_in",
-				"primary_invoices"
-			],
-			[
-				"_filter_con",
-				"_filter_contract_infos"
-			],
-			[
-				"ser",
-				"serialize"
-			],
-			[
-				"Ana",
-				"AnalyticsBriefSerializer"
-			],
-			[
-				"make",
-				"makeHeaderFlow"
-			],
-			[
-				"scro",
-				"scrollTop"
-			],
-			[
-				"group",
-				"groupped"
-			],
-			[
-				"proj",
-				"projectsFn"
-			],
-			[
-				"summa",
-				"summaryColumnDefs"
-			],
-			[
-				"row",
-				"rowData"
-			],
-			[
-				"summgi",
-				"summaryGridOptions"
-			],
-			[
-				"upda",
-				"updateSummary"
-			],
-			[
-				"filter",
-				"filteredNodes"
-			],
-			[
-				"fil",
-				"filteredNodes"
-			],
-			[
-				"_a",
-				"_adjustDimensions"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "Constants.cs",
+			"settings":
+			{
+				"buffer_size": 641,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "EnableCubesJoin.cs",
+			"settings":
+			{
+				"buffer_size": 1482,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MoveLogical.cs",
+			"settings":
+			{
+				"buffer_size": 6238,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MoveCube.cs",
+			"settings":
+			{
+				"buffer_size": 1643,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MoveComplexCube.cs",
+			"settings":
+			{
+				"buffer_size": 3568,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CanComplexPlayerMove.cs",
+			"settings":
+			{
+				"buffer_size": 1170,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CubeManager.cs",
+			"settings":
+			{
+				"buffer_size": 2713,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 90 files for \"SendGlobalEvent\"\n\n/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToNextPoint.cs:\n   70              finished.value = true;\n   71              if (endEvent.value != null) {\n   72:                 Graph.SendGlobalEvent(endEvent.value);\n   73              }\n   74              EndAction(true);\n\n/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerCubeSense.cs:\n    8          if (System.Array.IndexOf(Constants.PlayerDeathTags, other.gameObject.tag) != -1) {\n    9              Debug.Log(\"WE ARE GOING TO SEND EVENT!!!\");\n   10:             // Graph.SendGlobalEvent(Constants.PlayerDeadEvent);\n   11:             Graph.SendGlobalEvent(\"PlayerDeadEvent\");\n   12          }\n   13      }\n\n3 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 755,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
 		{
 			"file": "MoveToNextPoint.cs",
 			"settings":
@@ -528,58 +594,10 @@
 			}
 		},
 		{
-			"file": "CameraAim.cs",
+			"file": "PlayerCubeSense.cs",
 			"settings":
 			{
-				"buffer_size": 1965,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "CubeManager.cs",
-			"settings":
-			{
-				"buffer_size": 716,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "SenseChecker.cs",
-			"settings":
-			{
-				"buffer_size": 1963,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Constants.cs",
-			"settings":
-			{
-				"buffer_size": 578,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "KillPlayer.cs",
-			"settings":
-			{
-				"buffer_size": 627,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "PlayerAPI.cs",
-			"settings":
-			{
-				"buffer_size": 485,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "CanComplexPlayerMove.cs",
-			"settings":
-			{
-				"buffer_size": 734,
+				"buffer_size": 447,
 				"line_ending": "Unix"
 			}
 		}
@@ -933,32 +951,37 @@
 	],
 	"file_history":
 	[
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerCubeSense.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/GameManager.cs.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToPlayer.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveComplexCube.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/IsMovingOnObstacle.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/InitCamParams.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/InitPlayerBehaviourTree.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/CanComplexPlayerMove.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/GetActedObject.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/KillPlayer.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerAPI.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveLogical.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/SenseChecker.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveCube.cs",
+		"/Users/nemish/projects/just_old_story/Assets/scripts/InputHandler.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/IsMovingOnObstacle.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/CubeManager.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/CanComplexPlayerMove.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/CameraAim.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveDirection.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToNextPoint.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerCubeSense.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToPlayer.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/GameManager.cs.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveComplexCube.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/InitCamParams.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/InitPlayerBehaviourTree.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/DragMe.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/EnemyBuilder.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/Spawn.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/Constants.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/ObstacleChecker.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/DisableAll.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/SenseChecker.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/DeathSpawner.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/IsMovingOnEnemy.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveSphere.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveLogical.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/CameraAim.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerDeath.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/Spawn",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToNextPoint.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/ObstacleCheker.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveLogical",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/FollowTarget.cs",
@@ -1055,12 +1078,7 @@
 		"/Users/nemish/projects/Kit2/kit2/kit/lib/helpers/department_structure.py",
 		"/Users/nemish/projects/Kit2/kit2/kit/api/__init__.py",
 		"/Users/nemish/projects/Kit2/kit2/test_common.py",
-		"/Users/nemish/projects/Kit2/finance/api/_1c/notifications.py",
-		"/Users/nemish/projects/Kit2/finance/templates/email/refund_request_cancelled.tpl",
-		"/Users/nemish/projects/Kit2/finance/tests/api/test_refund_request.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/templates/js/workspace/saldo_revision/saldo_revision.js",
-		"/Users/nemish/projects/Kit2/salary/static/salary/css/styles.css",
-		"/Users/nemish/projects/Kit2/finance/lib/api/project_creators_external.py"
+		"/Users/nemish/projects/Kit2/finance/api/_1c/notifications.py"
 	],
 	"find":
 	{
@@ -1184,6 +1202,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"SendGlobalEvent",
+			"Linq",
+			"abstract",
+			"ActionTask",
+			"PlayerCanJoinWIthCubes",
+			"EnableJoin",
+			"cube",
+			"otherPlayCube",
+			"CubeManager",
+			"check",
+			"checkCommon",
+			"position",
+			"transform",
+			"moveTime",
 			"List",
 			"Graph.SendGlobalEvent",
 			"SendGlobalEvent",
@@ -1297,21 +1329,7 @@
 			"Left",
 			"getCheckDistance",
 			"_getOppositeDirection()",
-			"initialDirection",
-			"moveDistance",
-			"new ",
-			"Vector",
-			"Direction",
-			"left",
-			"Left",
-			"xStep",
-			"yStep",
-			"direction",
-			"oppositeStep",
-			"add",
-			"updateNextPoint",
-			"sequence",
-			"changePointType"
+			"initialDirection"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1457,11 +1475,424 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "Constants.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 0,
+					"file": "Constants.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								635,
+								635
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 58
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "EnableCubesJoin.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1272,
+								1272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 83
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 251.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "MoveLogical.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 17
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "MoveCube.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1643,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1484,
+								1484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 17
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 176.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "MoveComplexCube.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3559,
+								3559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 28
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 1280.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "CanComplexPlayerMove.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								437,
+								437
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "CubeManager.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2659,
+								2659
+							]
+						],
+						"settings":
+						{
+							"highlight_line": false,
+							"history_list_is_closing": true,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 53
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 536.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 755,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										238,
+										253
+									],
+									[
+										594,
+										609
+									],
+									[
+										663,
+										678
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								678,
+								678
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/BetterFindBuffer/FindResults.hidden-tmTheme",
+							"default_dir": "/Users/nemish/projects/unity/cubematters/Assets/scripts",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 40
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "MoveToNextPoint.cs",
 					"semi_transient": false,
 					"settings":
@@ -1473,8 +1904,8 @@
 						"selection":
 						[
 							[
-								142,
-								142
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1488,235 +1919,10 @@
 								"motion": null,
 								"motion_count": "",
 								"must_capture_register_name": false,
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 16
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "CameraAim.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1965,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1735,
-								1735
-							]
-						],
-						"settings":
-						{
-							"highlight_line": false,
-							"history_list_is_closing": true,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
 								"xpos": 0
-							}
-						},
-						"translation.x": -0.0,
-						"translation.y": 613.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "CubeManager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 716,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								630,
-								630
-							]
-						],
-						"settings":
-						{
-							"highlight_line": false,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 4
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "SenseChecker.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1963,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								318,
-								318
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 18
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Constants.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 578,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								275,
-								275
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 25
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "KillPlayer.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 627,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								439,
-								439
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 24
 							}
 						},
 						"translation.x": 0.0,
@@ -1727,106 +1933,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Constants.cs",
+					"buffer": 9,
+					"file": "PlayerCubeSense.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 578,
+						"buffer_size": 447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								196,
-								196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 25
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "PlayerAPI.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 485,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								358,
-								358
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 16
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "CanComplexPlayerMove.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 734,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								206,
-								206
+								45,
+								45
 							]
 						],
 						"settings":
@@ -1850,7 +1970,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1873,18 +1993,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -1920,12 +2033,92 @@
 		"selected_items":
 		[
 			[
-				"gam",
-				"GameManager.cs.cs"
+				"movcomp",
+				"MoveComplexCube.cs"
+			],
+			[
+				"mov",
+				"MoveCube.cs"
 			],
 			[
 				"cons",
 				"Constants.cs"
+			],
+			[
+				"cub",
+				"CubeManager.cs"
+			],
+			[
+				"joi",
+				"EnableCubesJoin.cs"
+			],
+			[
+				"cu",
+				"CubeManager.cs"
+			],
+			[
+				"plaapi",
+				"PlayerAPI.cs"
+			],
+			[
+				"can",
+				"CanComplexPlayerMove.cs"
+			],
+			[
+				"kill",
+				"KillPlayer.cs"
+			],
+			[
+				"isvoon",
+				"IsMovingOnObstacle.cs"
+			],
+			[
+				"is",
+				"IsMovingOnObstacle.cs"
+			],
+			[
+				"canv",
+				"CanComplexPlayerMove.cs"
+			],
+			[
+				"cube",
+				"CubeManager.cs"
+			],
+			[
+				"di",
+				"MoveDirection.cs"
+			],
+			[
+				"ismoon",
+				"IsMovingOnObstacle.cs"
+			],
+			[
+				"sen",
+				"SenseChecker.cs"
+			],
+			[
+				"plase",
+				"PlayerCubeSense.cs"
+			],
+			[
+				"mo",
+				"MoveCube.cs"
+			],
+			[
+				"plya",
+				"PlayerAPI.cs"
+			],
+			[
+				"movetop",
+				"MoveToPlayer.cs"
+			],
+			[
+				"movto",
+				"MoveToPlayer.cs"
+			],
+			[
+				"gam",
+				"GameManager.cs.cs"
 			],
 			[
 				"pla",
@@ -1938,10 +2131,6 @@
 			[
 				"cam",
 				"CameraAim.cs"
-			],
-			[
-				"movto",
-				"MoveToPlayer.cs"
 			],
 			[
 				"move",
@@ -1966,18 +2155,6 @@
 			[
 				"inipl",
 				"InitPlayerBehaviourTree.cs"
-			],
-			[
-				"mov",
-				"MoveCube.cs"
-			],
-			[
-				"cub",
-				"CubeManager.cs"
-			],
-			[
-				"sen",
-				"SenseChecker.cs"
 			],
 			[
 				"ismo",
@@ -2366,70 +2543,6 @@
 			[
 				"ana",
 				"salary/templates/analytics.html"
-			],
-			[
-				"userserv",
-				"salary/static/salary/js/user_service.js"
-			],
-			[
-				"montvi",
-				"salary/static/salary/js/month_view_controller.js"
-			],
-			[
-				"saviews",
-				"salary/views.py"
-			],
-			[
-				"vie",
-				"collector/views.py"
-			],
-			[
-				"testcal",
-				"salary/tests/test_calculator.py"
-			],
-			[
-				"salrevwin",
-				"kit2/kit/templates/js/workspace/saldo_revision/saldo_revision_window.js"
-			],
-			[
-				"access_log",
-				"kit2/kit/middleware/access_log.py"
-			],
-			[
-				"salrejs",
-				"kit2/kit/templates/js/workspace/saldo_revision/saldo_revision.js"
-			],
-			[
-				"testcapl",
-				"salary/tests/test_calculator.py"
-			],
-			[
-				"render",
-				"kit2/kit/templates/js/renderers.js"
-			],
-			[
-				"anacal",
-				"salary/lib/analytics_calculator.py"
-			],
-			[
-				"anapy",
-				"salary/lib/analytics.py"
-			],
-			[
-				"heaht",
-				"salary/static/salary/partials/header.html"
-			],
-			[
-				"monvi",
-				"salary/static/salary/js/month_view_controller.js"
-			],
-			[
-				"gitin",
-				".gitignore"
-			],
-			[
-				"analytics_grid.html",
-				"salary/static/salary/partials/analytics_grid.html"
 			]
 		],
 		"width": 0.0
@@ -2465,17 +2578,33 @@
 	},
 	"select_symbol":
 	{
-		"height": 47.0,
-		"last_filter": "getCamPosition",
+		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"getCamPosition",
-				"getCamPosition"
+				"GetTouchingOtherPlayCubes",
+				"GetTouchingOtherPlayCubes"
 			],
 			[
 				"IsTouchingOtherPlayer",
 				"IsTouchingOtherPlayer"
+			],
+			[
+				"IsTouchingOtherPlayCube",
+				"IsTouchingOtherPlayCube"
+			],
+			[
+				"istooh",
+				"IsTouchingOtherPlayCube"
+			],
+			[
+				"Dead",
+				"Dead"
+			],
+			[
+				"getCamPosition",
+				"getCamPosition"
 			],
 			[
 				"CanMoveToDirection",
@@ -2964,30 +3093,14 @@
 			[
 				"get_finance_operation_info",
 				"get_finance_operation_info"
-			],
-			[
-				"chfino",
-				"check_finance_operation"
-			],
-			[
-				"usersal",
-				"UserSalary"
-			],
-			[
-				"can_view_analytics_salary",
-				"can_view_analytics_salary"
-			],
-			[
-				"is_commercial_analyst",
-				"is_commercial_analyst"
 			]
 		],
 		"width": 392.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
-		"_vintageous_last_buffer_search": "childCubes",
+		"_vintageous_last_buffer_search": "tChildOffset",
 		"_vintageous_last_buffer_search_command": "vi_octothorp",
 		"_vintageous_last_char_search_command": "vi_f",
 		"_vintageous_last_character_search": "d",

@@ -8,16 +8,16 @@ public class PlayerAPI : MonoBehaviour {
     public GameObject explosion;
     List<Transform> childCubes = new List<Transform>();
 
-    private void Start() {
+    public void InitAPI() {
+        childCubes.Clear();
         foreach (Transform child in transform) {
-            if (child.tag == Constants.playerTag) {
+            if (child.tag == Constants.PLAYER_CUBE_CONTAINER_TAG) {
                 childCubes.Add(child);
             }
         }
     }
 
     public void Dead() {
-        Debug.Log("Oh Fuck! I'm dead MFC!!!");
         gameObject.SetActive(false);
         foreach (Transform child in childCubes) {
             Instantiate(explosion, child.position + new Vector3(-0.5f, -0.5f, -0.5f), Random.rotation);
@@ -33,7 +33,10 @@ public class PlayerAPI : MonoBehaviour {
                 touchingCubes.Add(cube);
             }
         }
-        // return new HashSet<Transform>(touchingCubes).ToList();
         return touchingCubes.Distinct().ToList();
+    }
+
+    public List<Transform> GetChildPlayCubes() {
+        return childCubes;
     }
 }

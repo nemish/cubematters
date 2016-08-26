@@ -7,6 +7,7 @@ public class Constants {
     public static string obstacleTag = "Obstacle";
     public static string playerTag = "Player";
     public static string playerSenseTag = "PlayerSense";
+    public static string PLAYER_CUBE_CONTAINER_TAG = "PlayerCubeContainer";
 
     public static string[] PlayerDeathTags = {"Enemy", "Obstacle", "Player"};
 
@@ -16,4 +17,6 @@ public class Constants {
     public static string DOWN = "down";
 
     public static string PlayerDeadEvent = "PlayerDeadEvent";
+
+    public static string PlayerCubeLayer = "PlayerCubeLayer";
 }

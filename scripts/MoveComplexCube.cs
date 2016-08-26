@@ -106,6 +106,7 @@ public class MoveComplexCube : ActionTask {
         foreach (Transform child in childCubes.value) {
             child.rotation = rot;
             child.position += tChildOffset;
+            Debug.Log(child.position);
             child.parent = agent.transform;
         }
         EndAction(true);
