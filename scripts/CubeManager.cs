@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +9,10 @@ using NodeCanvas.Framework;
 
 public class CubeManager : MonoBehaviour {
 
+    public Color joinColor = new Color(0.5f, 0.4f, 0.9f);
+    public Color decomposeColor = new Color(0.6f, 0.6f, 0.6f);
+
+    private GameManager gameManager;
     private static CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
     private static TextInfo textInfo = cultureInfo.TextInfo;
     private GameObject playerCube;
@@ -17,16 +21,14 @@ public class CubeManager : MonoBehaviour {
     private bool joinEnabled = false;
     private string joinColorHex = "#D79F73";
     private Color originalColor;
-    private Color joinColor = new Color(0.9f, 0.6f, 0.4f);
     private Color emissionColor;
 
     private void Start() {
         playerCube = transform.Find("PlayerCube").gameObject;
         playerCubeRenderer = playerCube.GetComponent<Renderer>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        // emissionColor = playerCubeRenderer.material.GetColor("_EmissionColor");
         originalColor = playerCubeRenderer.material.GetColor("_EmissionColor");
-        // Color.TryParseHexString("#F00", out joinColor);
 
         foreach (Transform child in transform) {
             if (child.tag == Constants.playerSenseTag) {
@@ -36,9 +38,22 @@ public class CubeManager : MonoBehaviour {
     }
 
     public bool CanMoveToDirection(string direction) {
-        string checkerName = textInfo.ToTitleCase(direction) + "Checker";
-        SenseChecker checker = transform.Find(checkerName).GetComponent<SenseChecker>();
+        SenseChecker checker = getChecker(direction);
         return checker.ObstacleOk() && !checker.IsTouchingOtherPlayer();
+    }
+
+    private SenseChecker getChecker(string direction) {
+        string checkerName = getCheckerName(direction);
+        return transform.Find(checkerName).GetComponent<SenseChecker>();
+    }
+
+    private bool IsStandingOnSomething() {
+        SenseChecker checker = getChecker("down");
+        return checker.IsTouchingPlayer() || checker.IsTouchingObstacle();
+    }
+
+    private string getCheckerName(string direction) {
+        return textInfo.ToTitleCase(direction) + "Checker";
     }
 
     public bool IsTouchingOtherPlayCubeAnywhere() {
@@ -81,14 +96,30 @@ public class CubeManager : MonoBehaviour {
     }
 
     public void EnableDecompose() {
-        Debug.Log("EnableDecompose");
+        playerCubeRenderer.material.SetColor ("_EmissionColor", decomposeColor);
     }
 
     public void DisableDecompose() {
-        Debug.Log("DisableDecompose");
+        playerCubeRenderer.material.SetColor ("_EmissionColor", originalColor);
     }
 
     public bool IsOnGround() {
         return !CanMoveToDirection("down");
+    }
+
+    public bool IsInCompose() {
+        return false;
+    }
+
+    public void ToDecompose() {}
+
+    public bool CanDecompose() {
+        SenseChecker upChecker = getChecker("up");
+        bool topOk = true;
+        if (upChecker.IsTouchingConnectedNeighbourCube()) {
+            Transform cubeAbove = upChecker.GetTouchingConnectedNeighbourCube();
+            topOk = cubeAbove.GetComponent<CubeManager>().IsInCompose();
+        }
+        return IsStandingOnSomething() && topOk;
     }
 }

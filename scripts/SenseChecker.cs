@@ -10,18 +10,14 @@ public class SenseChecker : MonoBehaviour {
     private Transform _otherPlayCube;
 
     void OnTriggerStay(Collider other){
-        if (other.gameObject.tag == Constants.obstacleTag) {
-            _touchingObstacle = true;
-        } else if (other.gameObject.tag == Constants.enemyTag) {
-            _touchingEnemy = true;
-        } else if (isPlayer(other)) {
-            _touchingPlayer = true;
-            _isOtherPlayer = transform.parent.parent != other.transform.parent.parent;
-            _otherPlayCube = other.transform.parent;
-        }
+        handleCollision(other);
     }
 
     void OnTriggerEnter(Collider other){
+        handleCollision(other);
+    }
+
+    void handleCollision(Collider other) {
         if (other.gameObject.tag == Constants.obstacleTag) {
             _touchingObstacle = true;
         } else if (other.gameObject.tag == Constants.enemyTag) {
@@ -29,7 +25,9 @@ public class SenseChecker : MonoBehaviour {
         } else if (isPlayer(other)) {
             _touchingPlayer = true;
             _isOtherPlayer = transform.parent.parent != other.transform.parent.parent;
-            _otherPlayCube = other.transform.parent;
+            if (_isOtherPlayer) {
+                _otherPlayCube = other.transform.parent;
+            }
         }
     }
 
@@ -61,6 +59,10 @@ public class SenseChecker : MonoBehaviour {
         return _touchingPlayer;
     }
 
+    public bool IsTouchingConnectedNeighbourCube() {
+        return _touchingPlayer && !IsTouchingOtherPlayer();
+    }
+
     public bool IsTouchingObstacle() {
         return _touchingObstacle;
     }
@@ -71,6 +73,10 @@ public class SenseChecker : MonoBehaviour {
 
     public bool ObstacleOk() {
         return !IsTouchingObstacle();
+    }
+
+    public Transform GetTouchingConnectedNeighbourCube() {
+        return _otherPlayCube;
     }
 
 }

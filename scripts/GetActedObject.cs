@@ -9,11 +9,19 @@ public class GetActedObject : ActionTask {
 
     public BBParameter<string> hitLayer = null;
     public BBParameter<Transform> actedObject;
+    public BBParameter<bool> decomposing;
+
+    private delegate bool ActionChecker(CubeManager mgr);
+    private ActionChecker actionCheckerFn;
 
     protected override void OnExecute() {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         actedObject.value = null;
+        actionCheckerFn = CheckJoin;
+        if (decomposing.value) {
+            actionCheckerFn = CheckCompose;
+        }
 
         int layerMask = Physics.DefaultRaycastLayers;
         if (hitLayer.value != null) {
@@ -27,13 +35,21 @@ public class GetActedObject : ActionTask {
             }
             if (tr.tag == Constants.PLAYER_CUBE_CONTAINER_TAG) {
                 CubeManager mgr = tr.GetComponent<CubeManager>();
-                if (mgr.JoinEnabled()) {
+                if (actionCheckerFn(mgr)) {
                     actedObject.value = hit.collider.transform;
                 }
             }
         }
 
         EndAction(true);
+    }
+
+    private bool CheckJoin(CubeManager mgr) {
+        return mgr.JoinEnabled();
+    }
+
+    private bool CheckCompose(CubeManager mgr) {
+        return mgr.CanDecompose();
     }
 
 }

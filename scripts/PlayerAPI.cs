@@ -22,7 +22,6 @@ public class PlayerAPI : MonoBehaviour {
         foreach (Transform child in childCubes) {
             Instantiate(explosion, child.position + new Vector3(-0.5f, -0.5f, -0.5f), Random.rotation);
         }
-        // Destroy(gameObject);
     }
 
     public List<Transform> GetTouchingOtherPlayCubes() {

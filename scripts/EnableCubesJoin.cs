@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ using ParadoxNotion.Design;
 [Category("Common actions")]
 public abstract class CubesBulkAction : ActionTask {
     public BBParameter<GameObject> player;
+    public BBParameter<List<Transform>> cubesInDecomposition;
     protected PlayerAPI api;
 
     protected override string OnInit(){
@@ -49,13 +51,8 @@ public class DisableCubesJoin : CubesBulkAction {
 }
 
 
-public class JoinCubes : CubesBulkAction {
-
+public abstract class SingleCubeAction : CubesBulkAction {
     public BBParameter<Transform> actedCube;
-
-    protected override void makeAction(CubeManager mgr) {
-        mgr.JoinToPlayer(player.value.transform);
-    }
 
     protected override List<Transform> getPlayCubes() {
         return new List<Transform>(new Transform[] {actedCube.value.parent.transform});
@@ -63,9 +60,26 @@ public class JoinCubes : CubesBulkAction {
 }
 
 
+public class JoinCubes : SingleCubeAction {
+    protected override void makeAction(CubeManager mgr) {
+        mgr.JoinToPlayer(player.value.transform);
+    }
+}
+
+
+public class DecomposeCube : SingleCubeAction {
+    protected override void makeAction(CubeManager mgr) {
+        cubesInDecomposition.value.Add(mgr.transform);
+        // mgr.ToDecompose();
+    }
+}
+
+
 public abstract class DecomposeAction : CubesBulkAction {
     protected override List<Transform> getPlayCubes() {
-        return api.GetChildPlayCubes();
+        return api.GetChildPlayCubes().Where(
+            cube => cube.GetComponent<CubeManager>().CanDecompose()
+        ).ToList();
     }
 }
 
@@ -81,6 +95,7 @@ public class EnableCubesDecompose : DecomposeAction {
 public class DisableCubesDecompose : DecomposeAction {
 
     protected override void makeAction(CubeManager mgr) {
+        cubesInDecomposition.value.Clear();
         mgr.DisableDecompose();
     }
 }
