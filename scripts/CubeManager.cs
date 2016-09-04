@@ -10,7 +10,8 @@ using NodeCanvas.Framework;
 public class CubeManager : MonoBehaviour {
 
     public Color joinColor = new Color(0.5f, 0.4f, 0.9f);
-    public Color decomposeColor = new Color(0.6f, 0.6f, 0.6f);
+    public Color waitForDecmoposeColor = new Color(0.6f, 0.6f, 0.6f);
+    public Color inDecomposeColor = new Color(0.3f, 0.6f, 0.14f);
 
     private GameManager gameManager;
     private static CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
@@ -21,14 +22,13 @@ public class CubeManager : MonoBehaviour {
     private bool joinEnabled = false;
     private string joinColorHex = "#D79F73";
     private Color originalColor;
-    private Color emissionColor;
 
     private void Start() {
         playerCube = transform.Find("PlayerCube").gameObject;
         playerCubeRenderer = playerCube.GetComponent<Renderer>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        originalColor = playerCubeRenderer.material.GetColor("_EmissionColor");
+        originalColor = getCurrentColor();
 
         foreach (Transform child in transform) {
             if (child.tag == Constants.playerSenseTag) {
@@ -81,12 +81,16 @@ public class CubeManager : MonoBehaviour {
         playerCubeRenderer.material.SetColor ("_EmissionColor", joinColor);
     }
 
-    public void DisableJoin() {
+    public void ToDefaultState() {
         playerCubeRenderer.material.SetColor ("_EmissionColor", originalColor);
     }
 
+    public void DisableJoin() {
+        ToDefaultState();
+    }
+
     public bool JoinEnabled() {
-        return playerCubeRenderer.material.GetColor("_EmissionColor") == joinColor;
+        return getCurrentColor() == joinColor;
     }
 
     public void JoinToPlayer(Transform player) {
@@ -96,11 +100,11 @@ public class CubeManager : MonoBehaviour {
     }
 
     public void EnableDecompose() {
-        playerCubeRenderer.material.SetColor ("_EmissionColor", decomposeColor);
+        setColor(waitForDecmoposeColor);
     }
 
     public void DisableDecompose() {
-        playerCubeRenderer.material.SetColor ("_EmissionColor", originalColor);
+        setColor(originalColor);
     }
 
     public bool IsOnGround() {
@@ -108,16 +112,39 @@ public class CubeManager : MonoBehaviour {
     }
 
     public bool IsInCompose() {
-        return false;
+        return getCurrentColor() == inDecomposeColor;
     }
 
-    public void ToDecompose() {}
+    public void ToDecompose() {
+        setColor(inDecomposeColor);
+    }
+
+    public void ToDecomposeWaiting() {
+        setColor(waitForDecmoposeColor);
+    }
+
+    public bool IsWaitingForDecompose() {
+        return getCurrentColor() == waitForDecmoposeColor;
+    }
+
+    private void setColor(Color color) {
+        playerCubeRenderer.material.SetColor ("_EmissionColor", color);
+    }
+
+    private Color getCurrentColor() {
+        return playerCubeRenderer.material.GetColor("_EmissionColor");
+    }
 
     public bool CanDecompose() {
         SenseChecker upChecker = getChecker("up");
         bool topOk = true;
-        if (upChecker.IsTouchingConnectedNeighbourCube()) {
-            Transform cubeAbove = upChecker.GetTouchingConnectedNeighbourCube();
+        Debug.Log("CanDecompose");
+        Debug.Log(IsStandingOnSomething());
+        Transform cubeAbove = upChecker.GetTouchingConnectedNeighbourCube();
+        if (cubeAbove != null) {
+            Debug.Log("Has cubeAbove");
+            Debug.Log(cubeAbove.name);
+            Debug.Log(cubeAbove.GetComponent<CubeManager>().IsInCompose());
             topOk = cubeAbove.GetComponent<CubeManager>().IsInCompose();
         }
         return IsStandingOnSomething() && topOk;

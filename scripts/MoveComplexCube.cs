@@ -54,8 +54,6 @@ public class MoveComplexCube : ActionTask {
         edgeChildPos = getEdgeChildPos();
 
         updateChildrenPositions();
-        Debug.Log(agent.transform.position);
-        Debug.Log(agent.transform.localPosition);
 
         agent.transform.localPosition += edgeChildPos + directionOffset;
 

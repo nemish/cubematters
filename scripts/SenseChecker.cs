@@ -25,9 +25,7 @@ public class SenseChecker : MonoBehaviour {
         } else if (isPlayer(other)) {
             _touchingPlayer = true;
             _isOtherPlayer = transform.parent.parent != other.transform.parent.parent;
-            if (_isOtherPlayer) {
-                _otherPlayCube = other.transform.parent;
-            }
+            _otherPlayCube = other.transform.parent;
         }
     }
 
@@ -44,7 +42,7 @@ public class SenseChecker : MonoBehaviour {
     }
 
     private bool isPlayer(Collider other) {
-        return other.gameObject.tag == Constants.playerTag;
+        return other.gameObject.tag == Constants.PLAYER_TAG;
     }
 
     public bool IsTouchingOtherPlayer() {

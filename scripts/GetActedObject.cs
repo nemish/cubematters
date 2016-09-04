@@ -19,6 +19,7 @@ public class GetActedObject : ActionTask {
         RaycastHit hit;
         actedObject.value = null;
         actionCheckerFn = CheckJoin;
+        string objectTag = Constants.PLAYER_CUBE_CONTAINER_TAG;
         if (decomposing.value) {
             actionCheckerFn = CheckCompose;
         }
@@ -30,10 +31,10 @@ public class GetActedObject : ActionTask {
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) {
             Transform tr = hit.collider.transform;
-            if (tr.parent.tag == Constants.PLAYER_CUBE_CONTAINER_TAG) {
+            if (tr.parent.tag == objectTag) {
                 tr = tr.parent;
             }
-            if (tr.tag == Constants.PLAYER_CUBE_CONTAINER_TAG) {
+            if (tr.tag == objectTag) {
                 CubeManager mgr = tr.GetComponent<CubeManager>();
                 if (actionCheckerFn(mgr)) {
                     actedObject.value = hit.collider.transform;

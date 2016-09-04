@@ -35,7 +35,17 @@ public class PlayerAPI : MonoBehaviour {
         return touchingCubes.Distinct().ToList();
     }
 
+    public void ClearChilds() {
+        transform.DetachChildren();
+    }
+
+    public void SetNewChild(Transform cube) {
+        cube.parent = transform;
+    }
+
     public List<Transform> GetChildPlayCubes() {
         return childCubes;
     }
+
+
 }
