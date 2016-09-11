@@ -20,7 +20,8 @@ public class PlayerAPI : MonoBehaviour {
     public void Dead() {
         gameObject.SetActive(false);
         foreach (Transform child in childCubes) {
-            Instantiate(explosion, child.position + new Vector3(-0.5f, -0.5f, -0.5f), Random.rotation);
+            CubeManager mgr = child.GetComponent<CubeManager>();
+            Instantiate(explosion, mgr.GetCenterPosition(), Random.rotation);
         }
     }
 
@@ -28,7 +29,7 @@ public class PlayerAPI : MonoBehaviour {
         List<Transform> touchingCubes = new List<Transform>();
         foreach (Transform child in childCubes) {
             CubeManager mgr = child.GetComponent<CubeManager>();
-            foreach (Transform cube in mgr.GetPlayCubesInTouch()) {
+            foreach (Transform cube in mgr.GetOtherPlayCubesInTouch()) {
                 touchingCubes.Add(cube);
             }
         }
@@ -44,8 +45,10 @@ public class PlayerAPI : MonoBehaviour {
     }
 
     public List<Transform> GetChildPlayCubes() {
-        return childCubes;
+        List<Transform> newList = new List<Transform>();
+        foreach (Transform child in childCubes) {
+            newList.Add(child);
+        }
+        return newList;
     }
-
-
 }

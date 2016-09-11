@@ -57,6 +57,10 @@ public class SenseChecker : MonoBehaviour {
         return _touchingPlayer;
     }
 
+    public bool IsTouchingNeighbourCube() {
+        return IsTouchingPlayer() && !IsTouchingOtherPlayer();
+    }
+
     public bool IsTouchingConnectedNeighbourCube() {
         return _touchingPlayer && !IsTouchingOtherPlayer();
     }

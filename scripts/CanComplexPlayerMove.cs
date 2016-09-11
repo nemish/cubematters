@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using NodeCanvas.Framework;
@@ -7,10 +8,18 @@ using ParadoxNotion.Design;
 [Category("Player actions")]
 public class CanComplexPlayerMove : ConditionTask {
 
+    public BBParameter<Transform> player;
     public BBParameter<List<Transform>> childCubes;
     public BBParameter<string> direction;
 
+    protected PlayerAPI api;
+
     protected override string OnInit() {
+        if (player.value != null) {
+            api = player.value.GetComponent<PlayerAPI>();
+        } else {
+            api = agent.transform.GetComponent<PlayerAPI>();
+        }
         return null;
     }
 
@@ -42,5 +51,17 @@ public class IsTouchingOtherPlayCube : CanComplexPlayerMove {
             }
         }
         return check;
+    }
+}
+
+
+
+[Category("Player actions")]
+public class IsStandingOnSomething : CanComplexPlayerMove {
+
+    protected override bool OnCheck() {
+        return childCubes.value.Where(
+            cube => cube.GetComponent<CubeManager>().IsStandingOnSomethingExternal()
+        ).ToList().Any();
     }
 }

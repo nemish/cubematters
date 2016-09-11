@@ -77,6 +77,7 @@ public class JoinCubes : SingleCubeAction {
 
 public class ResetCube : SingleCubeAction {
     protected override void makeAction(CubeManager mgr) {
+        Debug.Log("ResetCube");
         mgr.ToDefaultState();
     }
 }
@@ -84,40 +85,39 @@ public class ResetCube : SingleCubeAction {
 
 public class DecomposeCube : SingleCubeAction {
     protected override void makeAction(CubeManager mgr) {
-        Debug.Log("DECOMPOSE ACTION BEGIN!!!");
-        Debug.Log(mgr.transform.name);
         if (mgr.IsInCompose()) {
-            Debug.Log("NOT IsInCompose!!!!!!!!!");
             cubesInDecomposition.value.Remove(mgr.transform);
             mgr.ToDecomposeWaiting();
         } else {
-            Debug.Log(cubesInDecomposition.value);
-            Debug.Log("IsInCompose");
             cubesInDecomposition.value.Add(mgr.transform);
             mgr.ToDecompose();
-            Debug.Log(cubesInDecomposition.value);
         }
-        Debug.Log(cubesInDecomposition.value);
     }
 }
 
 
 public class DoDecompose : CubesBulkAction {
+    public BBParameter<List<Transform>> detachedChilds;
+
     protected override List<Transform> getPlayCubes() {
         return cubesInDecomposition.value;
     }
 
     protected override void begin() {
+        detachedChilds.value = api.GetChildPlayCubes();
+        Debug.Log(string.Format("DoDecompose begin {0}", detachedChilds.value.Count));
         api.ClearChilds();
     }
 
     protected override void makeAction(CubeManager mgr) {
+        detachedChilds.value.Remove(mgr.transform);
         api.SetNewChild(mgr.transform);
         mgr.ToDefaultState();
     }
 
     protected override void finalize() {
         api.InitAPI();
+        Debug.Log(string.Format("DoDecompose finalize {0}", detachedChilds.value.Count));
         cubesInDecomposition.value.Clear();
     }
 }
@@ -139,19 +139,59 @@ public abstract class DecomposeModeToggler : CubesBulkAction {
 public class EnableCubesDecompose : DecomposeModeToggler {
 
     protected override bool isSuitable(CubeManager mgr) {
+        if (cubesInDecomposition.value.Count > 0) {
+            return mgr.IsTouchingNeighbourInCompose() && !mgr.IsInCompose();
+        }
         return mgr.CanDecompose() && !mgr.IsInCompose();
     }
 
     protected override void makeAction(CubeManager mgr) {
         mgr.EnableDecompose();
     }
+
+    protected override void finalize() {
+        List<Transform> cubes = api.GetChildPlayCubes().Where(isNotSuitableForComposeAlready).ToList();
+
+        foreach (Transform cube in cubes) {
+            cube.GetComponent<CubeManager>().ToDefaultState();
+        }
+    }
+
+    private bool isNotSuitableForComposeAlready(Transform cube) {
+        CubeManager mgr = cube.GetComponent<CubeManager>();
+        return !isSuitable(mgr) && !mgr.IsInCompose();
+    }
 }
 
 
 public class DisableCubesDecompose : DecomposeModeToggler {
 
-    protected override void makeAction(CubeManager mgr) {
+    public BBParameter<List<Transform>> detachedChilds;
+
+    protected override List<Transform> getPlayCubes() {
+        Debug.Log(string.Format("DisableCubesDecompose {0}", detachedChilds.value.Count));
+        if (detachedChilds.value.Count > 0) {
+            return detachedChilds.value;
+        }
+        return api.GetChildPlayCubes().Where(
+            cube => isSuitable(cube.GetComponent<CubeManager>())
+        ).ToList();
+    }
+
+    protected override bool isSuitable(CubeManager mgr) {
+        return mgr.IsInCompose() || mgr.IsWaitingForDecompose();
+    }
+
+    protected override void begin() {
         cubesInDecomposition.value.Clear();
+    }
+
+    protected override void makeAction(CubeManager mgr) {
+        Debug.Log(string.Format("DisableCubesDecompose {0}", mgr.transform.name));
         mgr.DisableDecompose();
+    }
+
+    protected override void finalize() {
+        detachedChilds.value.Clear();
     }
 }

@@ -50,7 +50,7 @@ public class GetActedObject : ActionTask {
     }
 
     private bool CheckCompose(CubeManager mgr) {
-        return mgr.CanDecompose();
+        return mgr.IsWaitingForDecompose();
     }
 
 }

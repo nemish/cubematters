@@ -9,9 +9,11 @@ using NodeCanvas.Framework;
 
 public class CubeManager : MonoBehaviour {
 
-    public Color joinColor = new Color(0.5f, 0.4f, 0.9f);
+    public Color joinColor = new Color(0.5f, 0.7f, 1.0f);
     public Color waitForDecmoposeColor = new Color(0.6f, 0.6f, 0.6f);
     public Color inDecomposeColor = new Color(0.3f, 0.6f, 0.14f);
+    public Color potentialPlayerColor = new Color(0.35f, 0.35f, 0.35f);
+    public Color playerColor = new Color(0.61f, 0.41f, 0.26f);
 
     private GameManager gameManager;
     private static CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
@@ -22,19 +24,29 @@ public class CubeManager : MonoBehaviour {
     private bool joinEnabled = false;
     private string joinColorHex = "#D79F73";
     private Color originalColor;
+    private Transform centerPoint;
+
+    private delegate bool CheckSense(SenseChecker sense);
+    CheckSense checkSense;
 
     private void Start() {
         playerCube = transform.Find("PlayerCube").gameObject;
+        centerPoint = transform.Find("CubeCenterPoint");
         playerCubeRenderer = playerCube.GetComponent<Renderer>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        originalColor = getCurrentColor();
+        originalColor = getOriginalColor();
+        setColor(originalColor);
 
         foreach (Transform child in transform) {
             if (child.tag == Constants.playerSenseTag) {
                 checkers.Add(child);
             }
         }
+    }
+
+    public Vector3 GetCenterPosition() {
+        return centerPoint.position;
     }
 
     public bool CanMoveToDirection(string direction) {
@@ -47,9 +59,24 @@ public class CubeManager : MonoBehaviour {
         return transform.Find(checkerName).GetComponent<SenseChecker>();
     }
 
-    private bool IsStandingOnSomething() {
+    private Color getOriginalColor() {
+        Color c = potentialPlayerColor;
+        if (transform.parent && transform.parent.tag == Constants.PLAYER_TAG) {
+            c = playerColor;
+        } else if (IsTouchingOtherPlayCubeAnywhere()) {
+            c = joinColor;
+        }
+        return c;
+    }
+
+    public bool IsStandingOnSomething() {
         SenseChecker checker = getChecker("down");
         return checker.IsTouchingPlayer() || checker.IsTouchingObstacle();
+    }
+
+    public bool IsStandingOnSomethingExternal() {
+        SenseChecker checker = getChecker("down");
+        return checker.IsTouchingOtherPlayer() || checker.IsTouchingObstacle();
     }
 
     private string getCheckerName(string direction) {
@@ -57,20 +84,36 @@ public class CubeManager : MonoBehaviour {
     }
 
     public bool IsTouchingOtherPlayCubeAnywhere() {
+        return isAnySenseSuits(sense => sense.IsTouchingOtherPlayer());
+    }
+
+    public bool IsTouchingNeighbourCubeAnywhere() {
+        return isAnySenseSuits(sense => sense.IsTouchingNeighbourCube());
+    }
+
+    private bool isAnySenseSuits(CheckSense checkFn) {
         foreach (Transform checker in checkers) {
             SenseChecker sense = checker.GetComponent<SenseChecker>();
-            if (sense.IsTouchingOtherPlayer()) {
+            if (checkFn(sense)) {
                 return true;
             }
         }
         return false;
     }
 
-    public List<Transform> GetPlayCubesInTouch() {
+    public List<Transform> GetOtherPlayCubesInTouch() {
+        return getPlayCubesByChecker(sense => sense.IsTouchingOtherPlayer());
+    }
+
+    public List<Transform> GetNeighbourPlayCubesInTouch() {
+        return getPlayCubesByChecker(sense => sense.IsTouchingNeighbourCube());
+    }
+
+    private List<Transform> getPlayCubesByChecker(CheckSense checkFn) {
         List<Transform> cubes = new List<Transform>();
         foreach (Transform checker in checkers) {
             SenseChecker sense = checker.GetComponent<SenseChecker>();
-            if (sense.IsTouchingOtherPlayer()) {
+            if (checkFn(sense)) {
                 cubes.Add(sense.GetTouchingPlayCube());
             }
         }
@@ -78,11 +121,12 @@ public class CubeManager : MonoBehaviour {
     }
 
     public void EnableJoin() {
-        playerCubeRenderer.material.SetColor ("_EmissionColor", joinColor);
+        setColor(joinColor);
     }
 
     public void ToDefaultState() {
-        playerCubeRenderer.material.SetColor ("_EmissionColor", originalColor);
+        originalColor = getOriginalColor();
+        setColor(originalColor);
     }
 
     public void DisableJoin() {
@@ -95,7 +139,7 @@ public class CubeManager : MonoBehaviour {
 
     public void JoinToPlayer(Transform player) {
         transform.parent = player;
-        playerCubeRenderer.material.SetColor ("_EmissionColor", originalColor);
+        ToDefaultState();
         Graph.SendGlobalEvent("CUBE_JOINED", transform);
     }
 
@@ -104,7 +148,7 @@ public class CubeManager : MonoBehaviour {
     }
 
     public void DisableDecompose() {
-        setColor(originalColor);
+        ToDefaultState();
     }
 
     public bool IsOnGround() {
@@ -117,6 +161,16 @@ public class CubeManager : MonoBehaviour {
 
     public void ToDecompose() {
         setColor(inDecomposeColor);
+    }
+
+    public bool IsTouchingNeighbourInCompose() {
+        foreach (Transform cube in GetNeighbourPlayCubesInTouch()) {
+            CubeManager mgr = cube.GetComponent<CubeManager>();
+            if (mgr.IsInCompose()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void ToDecomposeWaiting() {
@@ -138,13 +192,8 @@ public class CubeManager : MonoBehaviour {
     public bool CanDecompose() {
         SenseChecker upChecker = getChecker("up");
         bool topOk = true;
-        Debug.Log("CanDecompose");
-        Debug.Log(IsStandingOnSomething());
         Transform cubeAbove = upChecker.GetTouchingConnectedNeighbourCube();
         if (cubeAbove != null) {
-            Debug.Log("Has cubeAbove");
-            Debug.Log(cubeAbove.name);
-            Debug.Log(cubeAbove.GetComponent<CubeManager>().IsInCompose());
             topOk = cubeAbove.GetComponent<CubeManager>().IsInCompose();
         }
         return IsStandingOnSomething() && topOk;
