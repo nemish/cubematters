@@ -5,6 +5,7 @@ public class Constants {
     public static string enemyTag = "Enemy";
     public static string obstacleTag = "Obstacle";
     public static string PLAYER_TAG = "Player";
+    public static string SECOND_PLAYER_TAG = "SecondPlayer";
     public static string playerSenseTag = "PlayerSense";
     public static string PLAYER_CUBE_CONTAINER_TAG = "PlayerCubeContainer";
 

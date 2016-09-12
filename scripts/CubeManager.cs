@@ -14,6 +14,7 @@ public class CubeManager : MonoBehaviour {
     public Color inDecomposeColor = new Color(0.3f, 0.6f, 0.14f);
     public Color potentialPlayerColor = new Color(0.35f, 0.35f, 0.35f);
     public Color playerColor = new Color(0.61f, 0.41f, 0.26f);
+    public Color secondPlayerColor = new Color(0.3f, 0.21f, 0.86f);
 
     private GameManager gameManager;
     private static CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
@@ -45,8 +46,18 @@ public class CubeManager : MonoBehaviour {
         }
     }
 
+    private void Update() {
+        if (!isDefaultState() && !IsTouchingOtherPlayCubeAnywhere() && !IsWaitingForDecompose() && !IsInCompose()) {
+            ToDefaultState();
+        }
+    }
+
     public Vector3 GetCenterPosition() {
         return centerPoint.position;
+    }
+
+    private bool isDefaultState() {
+        return getCurrentColor() == getOriginalColor();
     }
 
     public bool CanMoveToDirection(string direction) {
@@ -63,6 +74,8 @@ public class CubeManager : MonoBehaviour {
         Color c = potentialPlayerColor;
         if (transform.parent && transform.parent.tag == Constants.PLAYER_TAG) {
             c = playerColor;
+        } else if (transform.parent && transform.parent.tag == Constants.SECOND_PLAYER_TAG) {
+            c = secondPlayerColor;
         } else if (IsTouchingOtherPlayCubeAnywhere()) {
             c = joinColor;
         }
@@ -125,11 +138,13 @@ public class CubeManager : MonoBehaviour {
     }
 
     public void ToDefaultState() {
+        Debug.Log(transform.name);
         originalColor = getOriginalColor();
         setColor(originalColor);
     }
 
     public void DisableJoin() {
+        Debug.Log(string.Format("DisableJoin"));
         ToDefaultState();
     }
 

@@ -7,6 +7,7 @@ public class SenseChecker : MonoBehaviour {
     private bool _touchingEnemy = false;
     private bool _touchingPlayer = false;
     private bool _isOtherPlayer = false;
+    private bool _isSecondPlayer = false;
     private Transform _otherPlayCube;
 
     void OnTriggerStay(Collider other){
@@ -22,11 +23,19 @@ public class SenseChecker : MonoBehaviour {
             _touchingObstacle = true;
         } else if (other.gameObject.tag == Constants.enemyTag) {
             _touchingEnemy = true;
-        } else if (isPlayer(other)) {
+        } else if (isSecondPlayer(other)) {
+            _isSecondPlayer = true;
+        } else if (isPlayerCube(other)) {
             _touchingPlayer = true;
-            _isOtherPlayer = transform.parent.parent != other.transform.parent.parent;
+            Transform mainOther = other.transform.parent.parent;
+            _isOtherPlayer = transform.parent.parent != mainOther;
             _otherPlayCube = other.transform.parent;
         }
+    }
+
+    private bool isPlayerCube(Collider other) {
+        Transform p = other.gameObject.transform.parent;
+        return p.gameObject.tag == Constants.PLAYER_CUBE_CONTAINER_TAG;
     }
 
     void OnTriggerExit(Collider other){
@@ -34,15 +43,18 @@ public class SenseChecker : MonoBehaviour {
             _touchingObstacle = false;
         } else if (other.gameObject.tag == Constants.enemyTag) {
             _touchingEnemy = false;
-        } else if (isPlayer(other)) {
+        } else if (isSecondPlayer(other)) {
+            _isSecondPlayer = false;
+        } else if (isPlayerCube(other)) {
             _touchingPlayer = false;
             _isOtherPlayer = false;
             _otherPlayCube = null;
         }
     }
 
-    private bool isPlayer(Collider other) {
-        return other.gameObject.tag == Constants.PLAYER_TAG;
+    private bool isSecondPlayer(Collider other) {
+        Transform p = other.gameObject.transform.parent;
+        return p && p.parent && p.parent.gameObject.tag == Constants.SECOND_PLAYER_TAG;
     }
 
     public bool IsTouchingOtherPlayer() {

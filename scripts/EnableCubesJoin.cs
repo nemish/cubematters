@@ -105,7 +105,6 @@ public class DoDecompose : CubesBulkAction {
 
     protected override void begin() {
         detachedChilds.value = api.GetChildPlayCubes();
-        Debug.Log(string.Format("DoDecompose begin {0}", detachedChilds.value.Count));
         api.ClearChilds();
     }
 
@@ -117,7 +116,6 @@ public class DoDecompose : CubesBulkAction {
 
     protected override void finalize() {
         api.InitAPI();
-        Debug.Log(string.Format("DoDecompose finalize {0}", detachedChilds.value.Count));
         cubesInDecomposition.value.Clear();
     }
 }

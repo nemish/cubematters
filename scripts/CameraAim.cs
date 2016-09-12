@@ -52,7 +52,8 @@ public class CameraAim : MonoBehaviour {
     }
 
     public float getCamHeight() {
-        return getCameraAbsoluteHeight() * getPlayersDistance() / initialDistanse;
+        float playersHeightsDifference = Mathf.Abs(player1.position.y - player2.position.y);
+        return getCameraAbsoluteHeight() * getPlayersDistance() / initialDistanse + playersHeightsDifference;
     }
 
     private bool isSingleCube() {
