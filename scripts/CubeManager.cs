@@ -12,6 +12,7 @@ public class CubeManager : MonoBehaviour {
     public Color joinColor = new Color(0.5f, 0.7f, 1.0f);
     public Color waitForDecmoposeColor = new Color(0.6f, 0.6f, 0.6f);
     public Color inDecomposeColor = new Color(0.3f, 0.6f, 0.14f);
+    public Color chooseForDecomposeColor = new Color(0.4f, 0.6f, 0.14f);
     public Color potentialPlayerColor = new Color(0.35f, 0.35f, 0.35f);
     public Color playerColor = new Color(0.61f, 0.41f, 0.26f);
     public Color secondPlayerColor = new Color(0.3f, 0.21f, 0.86f);
@@ -47,13 +48,17 @@ public class CubeManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (!isDefaultState() && !IsTouchingOtherPlayCubeAnywhere() && !IsWaitingForDecompose() && !IsInCompose()) {
+        if (!isDefaultState() && !IsTouchingOtherPlayCubeAnywhere() && !IsChoosingForDecmopose() && !IsWaitingForDecompose() && !IsInCompose()) {
             ToDefaultState();
         }
     }
 
     public Vector3 GetCenterPosition() {
         return centerPoint.position;
+    }
+
+    public bool IsChoosingForDecmopose() {
+        return getCurrentColor() == chooseForDecomposeColor;
     }
 
     private bool isDefaultState() {
@@ -118,8 +123,16 @@ public class CubeManager : MonoBehaviour {
         return getPlayCubesByChecker(sense => sense.IsTouchingOtherPlayer());
     }
 
+    public bool IsFreeToJoin() {
+        return transform.parent == null;
+    }
+
     public List<Transform> GetNeighbourPlayCubesInTouch() {
         return getPlayCubesByChecker(sense => sense.IsTouchingNeighbourCube());
+    }
+
+    public bool IsTouchingFreePlayCube() {
+        return isAnySenseSuits(sense => sense.IsTouchingFreePlayCube());
     }
 
     private List<Transform> getPlayCubesByChecker(CheckSense checkFn) {
@@ -176,6 +189,10 @@ public class CubeManager : MonoBehaviour {
 
     public void ToDecompose() {
         setColor(inDecomposeColor);
+    }
+
+    public void ToChoosePlayerMode() {
+        setColor(chooseForDecomposeColor);
     }
 
     public bool IsTouchingNeighbourInCompose() {

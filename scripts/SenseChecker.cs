@@ -6,6 +6,8 @@ public class SenseChecker : MonoBehaviour {
     private bool _touchingObstacle = false;
     private bool _touchingEnemy = false;
     private bool _touchingPlayer = false;
+    private bool _isFreePlayerCube = false;
+    private bool _isSame = false;
     private bool _isOtherPlayer = false;
     private bool _isSecondPlayer = false;
     private Transform _otherPlayCube;
@@ -23,12 +25,16 @@ public class SenseChecker : MonoBehaviour {
             _touchingObstacle = true;
         } else if (other.gameObject.tag == Constants.enemyTag) {
             _touchingEnemy = true;
-        } else if (isSecondPlayer(other)) {
-            _isSecondPlayer = true;
         } else if (isPlayerCube(other)) {
+            _isSecondPlayer = false;
+            if (isSecondPlayer(other)) {
+                _isSecondPlayer = true;
+            }
             _touchingPlayer = true;
             Transform mainOther = other.transform.parent.parent;
-            _isOtherPlayer = transform.parent.parent != mainOther;
+            _isFreePlayerCube = mainOther == null;
+            _isOtherPlayer = transform.parent.parent != mainOther && !_isFreePlayerCube;
+            _isSame = transform.parent.parent == mainOther;
             _otherPlayCube = other.transform.parent;
         }
     }
@@ -43,11 +49,14 @@ public class SenseChecker : MonoBehaviour {
             _touchingObstacle = false;
         } else if (other.gameObject.tag == Constants.enemyTag) {
             _touchingEnemy = false;
-        } else if (isSecondPlayer(other)) {
-            _isSecondPlayer = false;
         } else if (isPlayerCube(other)) {
+            if (isSecondPlayer(other)) {
+                _isSecondPlayer = false;
+            }
+            _isFreePlayerCube = false;
             _touchingPlayer = false;
             _isOtherPlayer = false;
+            _isSame = false;
             _otherPlayCube = null;
         }
     }
@@ -58,7 +67,13 @@ public class SenseChecker : MonoBehaviour {
     }
 
     public bool IsTouchingOtherPlayer() {
-        return _isOtherPlayer;
+        // return _isOtherPlayer;
+        return IsTouchingPlayer() && !_isSame;
+    }
+
+    public bool IsTouchingFreePlayCube() {
+        Debug.Log(string.Format("IsTouchingFreePlayCube free {0} other {1} parent {2} this {3}, semi parent {4}", _isFreePlayerCube, _otherPlayCube, transform.parent.parent, transform, transform.parent));
+        return _isFreePlayerCube;
     }
 
     public Transform GetTouchingPlayCube() {

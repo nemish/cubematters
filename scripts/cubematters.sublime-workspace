@@ -4,8 +4,32 @@
 		"selected_items":
 		[
 			[
+				"pla",
+				"player1"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"act",
+				"actedCube"
+			],
+			[
+				"Enab",
+				"EnableCubesDecompose"
+			],
+			[
+				"IsTouchingOtherPlayer",
+				"IsTouchingOtherPlayCubeAnywhere"
+			],
+			[
+				"PLA",
+				"PLAYER_CUBE_CONTAINER_TAG	(Constants.cs)"
+			],
+			[
 				"Con",
-				"Constants.PLAYER_TAG"
+				"Constants	(Constants.cs)"
 			],
 			[
 				"rota",
@@ -104,10 +128,6 @@
 				"CubeManager"
 			],
 			[
-				"Enab",
-				"EnableDecompose	(EnableCubesJoin.cs)"
-			],
-			[
 				"Ji",
 				"JoinEnabled	(CubeManager.cs)"
 			],
@@ -141,10 +161,6 @@
 			],
 			[
 				"play",
-				"playerCube"
-			],
-			[
-				"pla",
 				"playerCube"
 			],
 			[
@@ -218,10 +234,6 @@
 			[
 				"Play",
 				"PlayerAPI"
-			],
-			[
-				"str",
-				"string	(IsMovingOnObstacle.cs)"
 			],
 			[
 				"exc",
@@ -502,44 +514,24 @@
 			[
 				"grid",
 				"gridUtils"
-			],
-			[
-				"dates",
-				"datesCols"
-			],
-			[
-				"Date",
-				"DatesPeriod"
-			],
-			[
-				"compo",
-				"componentDidUnMount	(GridReport.react.js)"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "PlayerAPI.cs",
-			"settings":
-			{
-				"buffer_size": 1566,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "GetActedObject.cs",
-			"settings":
-			{
-				"buffer_size": 1646,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "EnableCubesJoin.cs",
 			"settings":
 			{
-				"buffer_size": 5451,
+				"buffer_size": 7729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "PlayerAPI.cs",
+			"settings":
+			{
+				"buffer_size": 1785,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,15 +539,23 @@
 			"file": "CubeManager.cs",
 			"settings":
 			{
-				"buffer_size": 6348,
+				"buffer_size": 7229,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "MoveDirection.cs",
+			"file": "GetActedObject.cs",
 			"settings":
 			{
-				"buffer_size": 2662,
+				"buffer_size": 2007,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CameraAim.cs",
+			"settings":
+			{
+				"buffer_size": 2085,
 				"line_ending": "Unix"
 			}
 		},
@@ -571,15 +571,15 @@
 			"file": "SenseChecker.cs",
 			"settings":
 			{
-				"buffer_size": 2621,
+				"buffer_size": 3463,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Constants.cs",
+			"file": "CanComplexPlayerMove.cs",
 			"settings":
 			{
-				"buffer_size": 757,
+				"buffer_size": 1822,
 				"line_ending": "Unix"
 			}
 		},
@@ -941,17 +941,19 @@
 	],
 	"file_history":
 	[
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/Constants.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerCubeActions.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/GetActedObject.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveDirection.cs",
+		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerAPI.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToPlayer.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/CameraAim.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/CanComplexPlayerMove.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/CubeManager.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/EnableCubesJoin.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/GetActedObject.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerCubeSense.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/Constants.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/KillPlayer.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/InitPlayerBehaviourTree.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/PlayerAPI.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveCube.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveLogical.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/SenseChecker.cs",
@@ -959,7 +961,6 @@
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveToNextPoint.cs",
 		"/Users/nemish/projects/just_old_story/Assets/scripts/InputHandler.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/IsMovingOnObstacle.cs",
-		"/Users/nemish/projects/unity/cubematters/Assets/scripts/MoveDirection.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/GameManager.cs.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/InitCamParams.cs",
 		"/Users/nemish/projects/unity/cubematters/Assets/scripts/DragMe.cs",
@@ -1067,8 +1068,7 @@
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py",
 		"/Users/nemish/projects/Kit2/kit2/kit/api/user/api.py",
 		"/Users/nemish/projects/Kit2/kit2/kit/lib/helpers/department_structure.py",
-		"/Users/nemish/projects/Kit2/kit2/kit/api/__init__.py",
-		"/Users/nemish/projects/Kit2/kit2/test_common.py"
+		"/Users/nemish/projects/Kit2/kit2/kit/api/__init__.py"
 	],
 	"find":
 	{
@@ -1192,6 +1192,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"IsTouchingOtherPlayer",
+			"IsTouchingFreePlayCube",
+			"string.Format",
+			"IsTouchingFreePlayCube",
+			"IsTouchingOtherPlayer",
+			"'",
+			"IsTouchingFreePlayCube",
+			"IsTouchingOtherPlayer",
+			"getApi.",
+			"api",
+			"obj",
+			"actedCube.value.parent",
+			"ToDefault",
+			"SendAction",
+			"GlobalSendAction",
+			"2",
+			"isPlayer",
+			"IsOnGround",
+			"down",
 			"PLAYER_LEFT_TAG",
 			"EnableJoin",
 			"PLAYER_TAG",
@@ -1300,26 +1319,7 @@
 			"agent.",
 			"public",
 			">",
-			"BBParameter<",
-			"player2 == null",
-			"IsPlayerTooFar",
-			"_touchingEnemy = true",
-			"backwardChecker",
-			"forwardChecker",
-			"forward",
-			"left",
-			"void check",
-			"IsTouchingObstacle",
-			"_touchingObstacle",
-			"true",
-			"xpos",
-			"player1",
-			"container1",
-			"instantiatedPart",
-			"MoveSphere",
-			"rotateSpeed",
-			"direction",
-			"speed"
+			"BBParameter<"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1327,6 +1327,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"GetOtherPlayCubesInTouch",
 			"SECOND_PLAYER_TAG",
 			"GetOtherPlayCubesInTouch",
 			"PLAYER_TAG",
@@ -1453,8 +1454,7 @@
 			"filter_charges_to_aggregate_by_period",
 			"ChargesAggregator",
 			"from",
-			"get_excel_data",
-			"',"
+			"get_excel_data"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1465,16 +1465,59 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "EnableCubesJoin.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1629,
+								1629
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 35
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 473.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
 					"file": "PlayerAPI.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1566,
+						"buffer_size": 1785,
 						"regions":
 						{
 						},
@@ -1487,6 +1530,7 @@
 						],
 						"settings":
 						{
+							"highlight_line": false,
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"vintage":
 							{
@@ -1505,113 +1549,32 @@
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 65.0,
+						"translation.y": 105.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "GetActedObject.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1646,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1533,
-								1533
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 30
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 365.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "EnableCubesJoin.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5451,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								881,
-								881
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"vintage":
-							{
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 44
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 150.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "CubeManager.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6348,
+						"buffer_size": 7229,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2135,
-								2135
+								4378,
+								4378
 							]
 						],
 						"settings":
 						{
+							"highlight_line": false,
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"vintage":
 							{
@@ -1626,31 +1589,75 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 29
+								"xpos": 39
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 371.0,
+						"translation.y": 1515.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "GetActedObject.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								959,
+								959
+							]
+						],
+						"settings":
+						{
+							"highlight_line": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 42
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "MoveDirection.cs",
+					"file": "CameraAim.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2662,
+						"buffer_size": 2085,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2136,
-								2136
+								1744,
+								1744
 							]
 						],
 						"settings":
@@ -1669,14 +1676,14 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 0
+								"xpos": 107
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 356.0,
+						"translation.y": 431.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1717,7 +1724,7 @@
 						"translation.y": 1526.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1726,15 +1733,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2621,
+						"buffer_size": 3463,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1780,
-								1780
+								2489,
+								2489
 							]
 						],
 						"settings":
@@ -1753,31 +1760,31 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 36
+								"xpos": 37
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 515.0,
+						"translation.y": 818.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "Constants.cs",
+					"file": "CanComplexPlayerMove.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 757,
+						"buffer_size": 1822,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								254,
-								254
+								671,
+								671
 							]
 						],
 						"settings":
@@ -1796,14 +1803,14 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 57
+								"xpos": 28
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1819,8 +1826,8 @@
 						"selection":
 						[
 							[
-								2819,
-								2819
+								2328,
+								2328
 							]
 						],
 						"settings":
@@ -1837,14 +1844,14 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 0
+								"xpos": 15
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 971.0,
+						"translation.y": 753.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1907,8 +1914,16 @@
 		"selected_items":
 		[
 			[
+				"geta",
+				"GetActedObject.cs"
+			],
+			[
 				"cons",
 				"Constants.cs"
+			],
+			[
+				"playcu",
+				"PlayerCubeActions.cs"
 			],
 			[
 				"cbu",
@@ -2409,14 +2424,6 @@
 			[
 				"kitjs",
 				"kit2/kit/templates/js/kit.js"
-			],
-			[
-				"kit2kiurls",
-				"kit2/kit/urls.py"
-			],
-			[
-				"perwin",
-				"kit2/kit/templates/js/workspace/sites/finances/billing_periods/period_window.js"
 			]
 		],
 		"width": 0.0
@@ -2452,17 +2459,17 @@
 	},
 	"select_symbol":
 	{
-		"height": 47.0,
-		"last_filter": "getOriginalColor",
+		"height": 67.0,
+		"last_filter": "IsTouchingOtherPlayer",
 		"selected_items":
 		[
 			[
-				"getOriginalColor",
-				"getOriginalColor"
-			],
-			[
 				"IsTouchingOtherPlayer",
 				"IsTouchingOtherPlayer"
+			],
+			[
+				"GetTouchingPlayCube",
+				"GetTouchingPlayCube"
 			],
 			[
 				"GetOtherPlayCubesInTouch",
@@ -2473,16 +2480,120 @@
 				"GetTouchingOtherPlayCubes"
 			],
 			[
+				"enacujoi",
+				"EnableCubesJoin"
+			],
+			[
+				"istouf",
+				"IsTouchingOtherFreePlayCube"
+			],
+			[
+				"IsTouchingFreePlayCube",
+				"IsTouchingFreePlayCube"
+			],
+			[
+				"istoothf",
+				"IsTouchingOtherFreePlayCube"
+			],
+			[
+				"Istouf",
+				"IsTouchingFreePlayCube"
+			],
+			[
+				"istoo",
+				"IsTouchingOtherPlayCube"
+			],
+			[
+				"IsTouchingOtherPlayCubeAnywhere",
+				"IsTouchingOtherPlayCubeAnywhere"
+			],
+			[
+				"EnableJoin",
+				"EnableJoin"
+			],
+			[
+				"istooh",
+				"IsTouchingOtherPlayCube"
+			],
+			[
+				"istouoh",
+				"IsTouchingOtherPlayer"
+			],
+			[
+				"rese",
+				"ResetCube"
+			],
+			[
+				"setpa",
+				"SetPlayerForDecompose"
+			],
+			[
+				"enacud",
+				"EnableCubesDecompose"
+			],
+			[
+				"ToChoosePlayerMode",
+				"ToChoosePlayerMode"
+			],
+			[
+				"EnableChooseForDecomposeMode",
+				"EnableChooseForDecomposeMode"
+			],
+			[
+				"tochop",
+				"ToChoosePlayerForDecompose"
+			],
+			[
+				"tocho",
+				"ToChoosePlayerMode"
+			],
+			[
+				"getac",
+				"GetActedObject"
+			],
+			[
+				"pla",
+				"PlayerAPI"
+			],
+			[
+				"todefa",
+				"ToDefaultState"
+			],
+			[
+				"ToDefaultState",
+				"ToDefaultState"
+			],
+			[
+				"dod",
+				"DoDecompose"
+			],
+			[
+				"getOriginalColor",
+				"getOriginalColor"
+			],
+			[
+				"DisableJoin",
+				"DisableJoin"
+			],
+			[
+				"discu",
+				"DisableCubesJoin"
+			],
+			[
+				"getca",
+				"getCamHeight"
+			],
+			[
+				"IsOnGround",
+				"IsOnGround"
+			],
+			[
 				"jon",
 				"JoinEnabled"
 			],
 			[
 				"joi",
 				"JoinToPlayer"
-			],
-			[
-				"EnableJoin",
-				"EnableJoin"
 			],
 			[
 				"JoinEnabled",
@@ -2509,20 +2620,12 @@
 				"IsInCompose"
 			],
 			[
-				"todefa",
-				"ToDefaultState"
-			],
-			[
 				"EnableDecompose",
 				"EnableDecompose"
 			],
 			[
 				"CanDecompose",
 				"CanDecompose"
-			],
-			[
-				"getac",
-				"GetActedObject"
 			],
 			[
 				"DisableDecompose",
@@ -2563,10 +2666,6 @@
 			[
 				"isstan",
 				"IsStandingOnSomething"
-			],
-			[
-				"IsTouchingOtherPlayCubeAnywhere",
-				"IsTouchingOtherPlayCubeAnywhere"
 			],
 			[
 				"can",
@@ -2617,15 +2716,7 @@
 				"ObstacleOk"
 			],
 			[
-				"GetTouchingPlayCube",
-				"GetTouchingPlayCube"
-			],
-			[
 				"IsTouchingOtherPlayCube",
-				"IsTouchingOtherPlayCube"
-			],
-			[
-				"istooh",
 				"IsTouchingOtherPlayCube"
 			],
 			[
@@ -2883,90 +2974,6 @@
 			[
 				"setrefu",
 				"set_refund_payment"
-			],
-			[
-				"cont",
-				"Contract"
-			],
-			[
-				"saloreap",
-				"SaldoRevisionAPI"
-			],
-			[
-				"salre",
-				"SaldoRevisionAPI"
-			],
-			[
-				"salreapi",
-				"SaldoRevisionAPI"
-			],
-			[
-				"procreex",
-				"ProjectCreatorExternal"
-			],
-			[
-				"refreq",
-				"RefundRequest"
-			],
-			[
-				"saldoca",
-				"SaldoCalculator"
-			],
-			[
-				"refure",
-				"RefundRequestError"
-			],
-			[
-				"refunapi",
-				"RefundRequestAPI"
-			],
-			[
-				"paym",
-				"Payment"
-			],
-			[
-				"refun",
-				"RefundRequest"
-			],
-			[
-				"refunre",
-				"RefundRequestError"
-			],
-			[
-				"salca",
-				"SaldoCalculator"
-			],
-			[
-				"request_reconciliation_act",
-				"request_reconciliation_act"
-			],
-			[
-				"get_finance_operation_data_from_1c",
-				"get_finance_operation_data_from_1c"
-			],
-			[
-				"finance_operation_info_from_kit_data",
-				"finance_operation_info_from_kit_data"
-			],
-			[
-				"compile_finance_operation_info",
-				"compile_finance_operation_info"
-			],
-			[
-				"checkfinop",
-				"check_finance_operation"
-			],
-			[
-				"crmbrido",
-				"CrmBriefDocument"
-			],
-			[
-				"setrefpay",
-				"set_refund_payment"
-			],
-			[
-				"last_workoff",
-				"last_workoff"
 			]
 		],
 		"width": 392.0
@@ -2974,7 +2981,7 @@
 	"selected_group": 0,
 	"settings":
 	{
-		"_vintageous_last_buffer_search": "playerColor",
+		"_vintageous_last_buffer_search": "_isOtherPlayer",
 		"_vintageous_last_buffer_search_command": "vi_star",
 		"_vintageous_last_char_search_command": "vi_f",
 		"_vintageous_last_character_search": "w",

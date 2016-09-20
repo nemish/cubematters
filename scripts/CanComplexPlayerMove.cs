@@ -39,13 +39,14 @@ public class CanComplexPlayerMove : ConditionTask {
 
 
 [Category("Player actions")]
-public class IsTouchingOtherPlayCube : CanComplexPlayerMove {
+public class IsTouchingOtherFreePlayCube : CanComplexPlayerMove {
 
     protected override bool OnCheck() {
         bool check = false;
         foreach (Transform cube in childCubes.value) {
             CubeManager mgr = cube.GetComponent<CubeManager>();
-            if (mgr.IsTouchingOtherPlayCubeAnywhere()) {
+            Debug.Log(string.Format("IsTouchingOtherFreePlayCube {0}", mgr.transform.name));
+            if (mgr.IsTouchingFreePlayCube()) {
                 check = true;
                 break;
             }

@@ -51,4 +51,11 @@ public class PlayerAPI : MonoBehaviour {
         }
         return newList;
     }
+
+    public void EnableChooseForDecomposeMode() {
+        foreach (Transform child in childCubes) {
+            CubeManager mgr = child.GetComponent<CubeManager>();
+            mgr.ToChoosePlayerMode();
+        }
+    }
 }

@@ -10,12 +10,18 @@ using ParadoxNotion.Design;
 [Category("Common actions")]
 public abstract class CubesBulkAction : ActionTask {
     public BBParameter<GameObject> player;
+    public BBParameter<GameObject> player1;
+    public BBParameter<GameObject> player2;
     public BBParameter<List<Transform>> cubesInDecomposition;
     protected PlayerAPI api;
 
     protected override string OnInit(){
-        api = player.value.GetComponent<PlayerAPI>();
+        // getApi = player.value.GetComponent<PlayerAPI>();
         return null;
+    }
+
+    protected PlayerAPI getApi() {
+        return player.value.GetComponent<PlayerAPI>();
     }
 
     protected override void OnExecute(){
@@ -29,7 +35,7 @@ public abstract class CubesBulkAction : ActionTask {
     }
 
     protected virtual List<Transform> getPlayCubes() {
-        return api.GetTouchingOtherPlayCubes();
+        return getApi().GetTouchingOtherPlayCubes();
     }
 
     protected abstract void makeAction(CubeManager mgr);
@@ -40,6 +46,14 @@ public abstract class CubesBulkAction : ActionTask {
 
 
 public class EnableCubesJoin : CubesBulkAction {
+
+    protected override List<Transform> getPlayCubes() {
+        List<Transform> cubes = getApi().GetTouchingOtherPlayCubes();
+        Debug.Log(string.Format("getApi transform {0} self {1}", getApi().transform, player.value));
+        Debug.Log(string.Format("EnableCubesJoin {0} {1}", player.value, cubes.Count));
+        // Debug.Log(string.Format("EnableCubesJoin DETAIL COUNT {0}", cubes.Where(cube => cube.GetComponent<CubeManager>().IsTouchingFreePlayCube()).ToList().Count));
+        return cubes.Where(cube => cube.GetComponent<CubeManager>().IsFreeToJoin()).ToList();
+    }
 
     protected override void makeAction(CubeManager mgr) {
         mgr.EnableJoin();
@@ -70,14 +84,28 @@ public abstract class SingleCubeAction : CubesBulkAction {
 
 public class JoinCubes : SingleCubeAction {
     protected override void makeAction(CubeManager mgr) {
+        GameObject pl = player.value;
+        if (pl == null) {
+            pl = mgr.GetOtherPlayCubesInTouch().First().parent.gameObject;
+        }
         mgr.JoinToPlayer(player.value.transform);
     }
 }
 
 
 public class ResetCube : SingleCubeAction {
+    protected override List<Transform> getPlayCubes() {
+        if (actedCube.value == null) {
+            GameObject _p = player2.value;
+            if (player.value == player2.value) {
+                _p = player1.value;
+            }
+            return _p.GetComponent<PlayerAPI>().GetChildPlayCubes();
+        }
+        return getSingleElementList(actedCube.value.parent.transform);
+    }
+
     protected override void makeAction(CubeManager mgr) {
-        Debug.Log("ResetCube");
         mgr.ToDefaultState();
     }
 }
@@ -104,18 +132,18 @@ public class DoDecompose : CubesBulkAction {
     }
 
     protected override void begin() {
-        detachedChilds.value = api.GetChildPlayCubes();
-        api.ClearChilds();
+        detachedChilds.value = getApi().GetChildPlayCubes();
+        getApi().ClearChilds();
     }
 
     protected override void makeAction(CubeManager mgr) {
         detachedChilds.value.Remove(mgr.transform);
-        api.SetNewChild(mgr.transform);
+        getApi().SetNewChild(mgr.transform);
         mgr.ToDefaultState();
     }
 
     protected override void finalize() {
-        api.InitAPI();
+        getApi().InitAPI();
         cubesInDecomposition.value.Clear();
     }
 }
@@ -123,7 +151,8 @@ public class DoDecompose : CubesBulkAction {
 
 public abstract class DecomposeModeToggler : CubesBulkAction {
     protected override List<Transform> getPlayCubes() {
-        return api.GetChildPlayCubes().Where(
+        Debug.Log(string.Format("Player  {0}", player.value));
+        return player.value.transform.GetComponent<PlayerAPI>().GetChildPlayCubes().Where(
             cube => isSuitable(cube.GetComponent<CubeManager>())
         ).ToList();
     }
@@ -148,7 +177,7 @@ public class EnableCubesDecompose : DecomposeModeToggler {
     }
 
     protected override void finalize() {
-        List<Transform> cubes = api.GetChildPlayCubes().Where(isNotSuitableForComposeAlready).ToList();
+        List<Transform> cubes = getApi().GetChildPlayCubes().Where(isNotSuitableForComposeAlready).ToList();
 
         foreach (Transform cube in cubes) {
             cube.GetComponent<CubeManager>().ToDefaultState();
@@ -171,7 +200,7 @@ public class DisableCubesDecompose : DecomposeModeToggler {
         if (detachedChilds.value.Count > 0) {
             return detachedChilds.value;
         }
-        return api.GetChildPlayCubes().Where(
+        return getApi().GetChildPlayCubes().Where(
             cube => isSuitable(cube.GetComponent<CubeManager>())
         ).ToList();
     }
@@ -192,4 +221,48 @@ public class DisableCubesDecompose : DecomposeModeToggler {
     protected override void finalize() {
         detachedChilds.value.Clear();
     }
+}
+
+
+
+[Category("Common actions")]
+public class ToChoosePlayerForDecompose : ActionTask {
+    public BBParameter<GameObject> player1;
+    public BBParameter<GameObject> player2;
+
+    protected PlayerAPI api1;
+    protected PlayerAPI api2;
+
+    protected override string OnInit(){
+        api1 = player1.value.GetComponent<PlayerAPI>();
+        api2 = player2.value.GetComponent<PlayerAPI>();
+        return null;
+    }
+
+    protected override void OnExecute(){
+        api1.EnableChooseForDecomposeMode();
+        api2.EnableChooseForDecomposeMode();
+        EndAction(true);
+    }
+
+}
+
+
+[Category("Common actions")]
+public class SetPlayerForDecompose : ToChoosePlayerForDecompose {
+
+    public BBParameter<GameObject> player;
+    public BBParameter<Transform> actedCube;
+
+    protected override void OnExecute(){
+        Transform obj = actedCube.value.parent;
+        Debug.Log(actedCube.value.parent);
+        if (obj != null && (actedCube.value.tag == Constants.PLAYER_TAG || actedCube.value.tag == Constants.SECOND_PLAYER_TAG)) {
+            player.value = obj.parent.gameObject;
+            EndAction(true);
+            return;
+        }
+        EndAction(false);
+    }
+
 }

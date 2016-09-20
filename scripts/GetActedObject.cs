@@ -8,8 +8,11 @@ using ParadoxNotion.Design;
 public class GetActedObject : ActionTask {
 
     public BBParameter<string> hitLayer = null;
+    public BBParameter<GameObject> player;
     public BBParameter<Transform> actedObject;
     public BBParameter<bool> decomposing;
+    public BBParameter<bool> chooseForDecompose;
+    public BBParameter<bool> playerChoosen;
 
     private delegate bool ActionChecker(CubeManager mgr);
     private ActionChecker actionCheckerFn;
@@ -22,6 +25,8 @@ public class GetActedObject : ActionTask {
         string objectTag = Constants.PLAYER_CUBE_CONTAINER_TAG;
         if (decomposing.value) {
             actionCheckerFn = CheckCompose;
+        } else if (chooseForDecompose.value) {
+            actionCheckerFn = CheckIsChoosingForDecmopose;
         }
 
         int layerMask = Physics.DefaultRaycastLayers;
@@ -53,4 +58,11 @@ public class GetActedObject : ActionTask {
         return mgr.IsWaitingForDecompose();
     }
 
+    private bool CheckIsChoosingForDecmopose(CubeManager mgr) {
+        return mgr.IsChoosingForDecmopose();
+    }
+
 }
+
+
+
